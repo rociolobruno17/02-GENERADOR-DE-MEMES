@@ -1,0 +1,150 @@
+.modo-oscuro {
+    --colorFondoHeader: #191e2b;
+    --colorFondoMeme: #30343f;
+}
+
+
+.modo-claro {
+    --colorFondoHeader: #e0e0e0;
+    --colorFondoMeme: #eeeeee;
+}
+
+
+body {
+    /* width: 100vh; */
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    width: 100%;
+    height: 125px;
+    margin-top: -10px;
+    background-color: var(--colorFondoHeader);
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-app {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    color: white;
+    margin-top: 30px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor-botones-principales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-botones-principales button {
+    margin: 5px;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    /* Cambia el cursor a una mano */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transición suave */
+}
+
+.contenedor-botones-principales button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo claro al hacer hover */
+    color: #ececec;
+    /* Cambia el color del texto a un tono claro */
+    border-radius: 10px;
+}
+
+
+.contenedor-meme {
+    width: 100%;
+    height: 600px;
+    display: flex; /* Cambia de block a flex */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondoMeme);
+    flex-direction: column; /* Alinea elementos en columna */
+}
+
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+form input,
+form select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color:#30343f;
+}
+
+
+.botones-secundarios {
+    display: flex;
+    gap: 10px; /* Espaciado entre botones */
+    margin-top: 20px;
+}
+
+.botones-secundarios button {
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #4caf50; /* Botón verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones-secundarios button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    /* tablet */
+    header {
+        width: 100%;
+        height: 125px;
+    }
+
+    .contenedor-botones-principales {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    /* escritorio */
+    header {
+        width: 100%;
+        height: 125px;
+    }
+
+}

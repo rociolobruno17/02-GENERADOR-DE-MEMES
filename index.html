@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Generador de Memes</title>
+</head>
+
+<body class="modo-oscuro">
+
+    <header>
+        <h1 class="titulo-app">Generador de memes</h1>
+        <div class="contenedor-botones-principales">
+            <button class="boton-imagen" type="button" aria-label="Abrir panel de imagen">Imagen</button>
+            <button class="boton-texto" type="button" aria-label="Abrir panel de texto">Texto</button>
+            <button class="boton-modo" type="button" aria-label="Cambiar a modo oscuro">Modo oscuro</button>
+        </div>
+    </header>
+
+
+
+    <main class="contenedor-meme">
+
+        <form>
+
+            <label>Texto Superior</label>
+            <input id="textotop" type="text" placeholder="Escribe aquí..." />
+
+            <label>Texto Inferior</label>
+            <input id="textobottom" type="text" placeholder="Escribe aquí..." />
+
+            <label>Familia Tipográfica</label>
+            <select id="fuente-tipografica" type="text" >
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="'Comic Sans MS', cursive">Comic Sans</option>
+                <option value="'Courier New', monospace">Courier New</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+            </select>
+
+            <label>Tamaño</label>
+            <input id="tamaño-fuente" type="number" min="10" max="100" step="1" value="24" />
+
+            <label>Interlineado</label>
+            <input id="interlineado" type="number" min="1" max="3" step="0.1" value="1.5" />
+
+            <label>Color</label>
+            <input id="textocolor" type="color" />
+
+            <label>Fondo</label>
+            <input id="textocolorfondo" type="color" />
+
+            <label>Alinear</label>
+            <select id="textoalign">
+                <option value="left">Izquierda</option>
+                <option value="center">Centro</option>
+                <option value="right">Derecha</option>
+            </select>
+
+        </form>
+
+        <div id="card">
+            <h2 style="margin: 0;" id="topcard"></h2>
+            <h2 id="bottomcard"></h2>
+        </div>
+        <div class="botones-secundarios">
+            <button id="descargar">Descargar meme</button>
+            <button id="restablecer">Reestablecer</button>
+        </div>
+
+    </main>
+
+
+
+    <aside></aside>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
