@@ -10,6 +10,7 @@
 }
 
 
+
 body {
     /* width: 100vh; */
     margin: 0;
@@ -75,8 +76,22 @@ header {
     flex-direction: column; /* Alinea elementos en columna */
 }
 
+.oculto {
+    display: none;
+}
+
+/* Panel visible */
+.panel-control {
+    display: block; /* Hace visible el panel cuando se activa */
+    background-color: var(--colorFondoHeader);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 
 form label {
+    width: 100%;
     display: block;
     margin-top: 10px;
     font-family: Arial, sans-serif;
@@ -147,4 +162,37 @@ form select {
         height: 125px;
     }
 
+
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor-meme {
+        width: 70%;
+        display: inline-block; 
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorFondoMeme);
+    }
+
+    #card {
+        text-align: center;
+    }
+    .botones-secundarios {
+        display: flex;
+        justify-content: center;
+    }
+
+    .panel-control {
+        width: 30%;
+        display: inline-block; 
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorFondoHeader);
+        color: white;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    
 }

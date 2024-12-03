@@ -24,8 +24,9 @@ window.onload = () => {
     const $inputTamañoFuente = $("#tamaño-fuente");
     const $inputInterlineado = $("#interlineado");
     
-    
-    
+// Seleccionar elementos
+const $botonTexto = document.querySelector('.boton-texto'); // Botón en el header
+const $panelControl = document.querySelector('.panel-control'); // Panel lateral
     
     
     
@@ -84,6 +85,12 @@ window.onload = () => {
     });
     
     
+
+    // Alternar la visibilidad del panel al hacer clic en el botón
+    $botonTexto.addEventListener('click', () => {
+    $panelControl.classList.toggle('oculto'); // Alterna la clase 'oculto'
+    });
+
     
     
     $botonDescargar.addEventListener("click", () => {
