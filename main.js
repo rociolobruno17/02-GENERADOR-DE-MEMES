@@ -23,10 +23,27 @@ window.onload = () => {
     const $inputFuente = $("#fuente-tipografica");
     const $inputTamañoFuente = $("#tamaño-fuente");
     const $inputInterlineado = $("#interlineado");
-    
-// Seleccionar elementos
-const $botonTexto = document.querySelector('.boton-texto'); // Botón en el header
-const $panelControl = document.querySelector('.panel-control'); // Panel lateral
+    const $inputBrillo = $("#brillo");
+    const $inputOpacidad = $("#opacidad");
+    const $inputContraste = $("#contraste");
+    const $inputDesenfoque = $("#desenfoque");
+    const $inputGrises = $("#grises");
+    const $inputSepia = $("#sepia");
+    const $inputHue = $("#hue");
+    const $inputSaturacion = $("#saturacion");
+    const $inputNegativo = $("#negativo");
+    const $contenedorImagen = $("#contenedor-imagen");
+    const $urlImagen = $("#url-imagen");
+    const $cargarImagen = $("#cargar-imagen");
+    const $botonTexto = $(".boton-texto");
+    const $panelTexto = $(".panel-control-texto");
+    const $botonImagen = $(".boton-imagen");
+    const $panelImagen = $(".panel-control-imagen");
+
+
+
+
+
     
     
     
@@ -43,7 +60,23 @@ const $panelControl = document.querySelector('.panel-control'); // Panel lateral
     });
     
     
-    
+    // Función para mostrar el panel de imagen y ocultar el de texto
+    $botonImagen.addEventListener('click', () => {
+    $panelImagen.classList.add('panel-visible');
+    $panelTexto.classList.remove('panel-visible');
+});
+
+// Función para mostrar el panel de texto y ocultar el de imagen
+    $botonTexto.addEventListener('click', () => {
+    $panelTexto.classList.add('panel-visible');
+    $panelImagen.classList.remove('panel-visible');
+});
+
+
+
+
+
+
     
     
     
@@ -88,7 +121,7 @@ const $panelControl = document.querySelector('.panel-control'); // Panel lateral
 
     // Alternar la visibilidad del panel al hacer clic en el botón
     $botonTexto.addEventListener('click', () => {
-    $panelControl.classList.toggle('oculto'); // Alterna la clase 'oculto'
+    $panelControlTexto.classList.toggle('oculto'); // Alterna la clase 'oculto'
     });
 
     
@@ -117,6 +150,16 @@ const $panelControl = document.querySelector('.panel-control'); // Panel lateral
         $inputFuente.value = ""
         $inputColorFondo.value = ""
         $inputColor.value = ""
+
+        $inputBrillo.value = "1"
+        $inputOpacidad.value = "1"
+        $inputContraste.value = "100%"
+        $inputDesenfoque.value = "0px"
+        $inputGrises.value = "0%"
+        $inputSepia.value = "0%"
+        $inputHue.value = "0deg"
+        $inputSaturacion.value = "100%"
+        $contenedorImagen.innerHTML = ""
     }
     
     $buttonReestablecer.addEventListener("click", reestablecerValores)
@@ -124,29 +167,89 @@ const $panelControl = document.querySelector('.panel-control'); // Panel lateral
     reestablecerValores ()
     
     
+    function iniciarValores () {
+        $inputBrillo.value = "1"
+        $inputOpacidad.value = "1"
+        $inputContraste.value = "100%"
+        $inputDesenfoque.value = "0px"
+        $inputGrises.value = "0%"
+        $inputSepia.value = "0%"
+        $inputHue.value = "0deg"
+        $inputSaturacion.value = "100%"
+
+    }
+
+    iniciarValores ()
+
+    $cargarImagen.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevenir el envío del formulario
+        const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
+        if (imageUrl) {
+            const imgElement = document.createElement("img"); // Crear un elemento <img>
+            imgElement.src = imageUrl; // Asignar la URL como fuente
+            imgElement.alt = "Imagen del meme"; // Agregar un texto alternativo
+            imgElement.style.maxWidth = "100%"; // Opcional: asegurarte de que la imagen se ajuste
+            imgElement.style.borderRadius = "8px"; // Opcional: estilo extra para bordes redondeados
+    
+            $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
+            $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
+        } else {
+            alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
+        }
+    });
+    
+
+
+
+
+    $inputBrillo.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`
+    })
+
+    
+    $inputOpacidad.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`
+    })
+
+        
+    $inputContraste.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `contrast(${$inputContraste.value})`
+    })
+
+    $inputDesenfoque.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value})`
+    })
+
+    $inputGrises.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value})`
+    })
+
+    $inputSepia.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `sepia	(${$inputSepia.value})`
+    })
+
+    $inputHue.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value})`
+    })
+
+    $inputSaturacion.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value})`
+    })
+    
+    $inputNegativo.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`
+    })
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     }

@@ -9,12 +9,22 @@
     --colorFondoMeme: #eeeeee;
 }
 
+.panel-control-imagen,
+.panel-control-texto {
+    display: none;
+}
+
+.panel-visible {
+    display: block;
+}
+
 
 
 body {
     /* width: 100vh; */
     margin: 0;
     padding: 0;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 
@@ -68,7 +78,6 @@ header {
 
 .contenedor-meme {
     width: 100%;
-    height: 600px;
     display: flex; /* Cambia de block a flex */
     justify-content: center;
     align-items: center;
@@ -76,24 +85,22 @@ header {
     flex-direction: column; /* Alinea elementos en columna */
 }
 
-.oculto {
-    display: none;
-}
 
-/* Panel visible */
-.panel-control {
-    display: block; /* Hace visible el panel cuando se activa */
-    background-color: var(--colorFondoHeader);
-    color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+#contenedor-imagen {
+    margin-top: 20px;
+    text-align: center;
+  }
 
+#contenedor-imagen img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
 
 form label {
-    width: 100%;
     display: block;
-    margin-top: 10px;
+    margin-top: 8px;
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #eeeeee;
@@ -101,12 +108,52 @@ form label {
 
 form input,
 form select {
-    width: 100%;
+    width: 70%;
     margin-bottom: 10px;
     padding: 5px;
     font-family: Arial, sans-serif;
     font-size: 14px;
     color:#30343f;
+}
+
+
+
+
+.panel-control-texto {
+    width: 100%;
+    background-color: var(--colorFondoHeader);
+    color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.panel-control-texto h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+}
+
+.panel-control-imagen {
+    width: 100%;
+    background-color: var(--colorFondoHeader);
+    color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.panel-control-imagen h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+}
+
+.panel-control-imagen h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: left;
 }
 
 
@@ -156,7 +203,19 @@ form select {
 
 @media (min-width: 1024px) {
 
+
+.panel-control-imagen,
+.panel-control-texto {
+    display: none;
+}
+
+.panel-visible {
+    display: block;
+}
+
+
     /* escritorio */
+
     header {
         width: 100%;
         height: 125px;
@@ -169,7 +228,7 @@ form select {
     }
 
     .contenedor-meme {
-        width: 70%;
+        width: 100%;
         display: inline-block; 
         justify-content: center;
         align-items: center;
@@ -184,15 +243,21 @@ form select {
         justify-content: center;
     }
 
-    .panel-control {
+    .panel-control-texto {
         width: 30%;
-        display: inline-block; 
-        justify-content: center;
-        align-items: center;
         background-color: var(--colorFondoHeader);
         color: white;
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    .panel-control-imagen {    
+        width: 30%;
+        background-color: var(--colorFondoHeader);
+        color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     
 }
