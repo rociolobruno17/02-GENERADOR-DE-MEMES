@@ -61,6 +61,7 @@ header {
 .contenedor-botones-principales button {
     margin: 5px;
     padding: 0 20px;
+    height: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: white;
@@ -77,7 +78,7 @@ header {
     /* Fondo claro al hacer hover */
     color: #ececec;
     /* Cambia el color del texto a un tono claro */
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
  /* MAIN*/
@@ -99,11 +100,18 @@ header {
     flex-direction: column; /* Alinea elementos en columna */
 }
 
+#contenedor-imagen {
+    width: 200px ;
+    height:200px;
+    background-position: center;
+    background-size: cover;
+}
 
+/* 
 #contenedor-imagen img {
     max-width: 100%;
     height: auto;
-  }
+  } */
 
 
   .botones-secundarios {
@@ -254,9 +262,8 @@ form select {
 
     #card {
         margin: 0;
-        max-width: 30%;
+        max-width: 450px;
         height: auto;
-        
     }
 
     #topcard, #bottomcard {

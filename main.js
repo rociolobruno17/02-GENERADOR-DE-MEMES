@@ -119,14 +119,7 @@ window.onload = () => {
     
     
     
-    $botonDescargar.addEventListener("click", () => {
-        $card.style.width = "1200px"
-        domtoimage.toBlob($card).then((blob) => {
-            saveAs(blob, "mi-meme.png");
-          });
-    })
-    
-    
+
     
     function reestablecerValores () {
         $inputTop.value = " "
@@ -172,20 +165,52 @@ window.onload = () => {
     iniciarValores ()
     
 
+
+
+
+
+
+
+
+
+
+    
+
     $cargarImagen.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevenir el envío del formulario
-        const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
-        if (imageUrl) {
-            const imgElement = document.createElement("img"); // Crear un elemento <img>
-            imgElement.src = imageUrl; // Asignar la URL como fuente
-            imgElement.alt = "Imagen del meme"; // Agregar un texto alternativo
-            imgElement.style.maxWidth = "100%"; // Opcional: asegurarte de que la imagen se ajuste    
-            $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
-            $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
-        } else {
-            alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
-        }
+        // event.preventDefault(); // Prevenir el envío del formulario
+        // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
+        // if (imageUrl) {
+        //     const imgElement = document.createElement("img"); // Crear un elemento <img>
+        //     imgElement.src = imageUrl; // Asignar la URL como fuente
+        //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
+        //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
+        //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
+        // } else {
+        //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
+        // }
+
+        $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
+
+
     });
+
+
+    $botonDescargar.addEventListener("click", () => {
+        $card.style.width = "1200px"
+        domtoimage.toBlob($card).then((blob) => {
+            saveAs(blob, "mi-meme.png");
+          });
+    })
+    
+    
+
+
+
+
+
+
+
+
     
 
 
