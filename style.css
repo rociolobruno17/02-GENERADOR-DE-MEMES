@@ -100,15 +100,9 @@ header {
 }
 
 
-#contenedor-imagen {
-    text-align: center;
-  }
-
 #contenedor-imagen img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
   }
 
 
@@ -244,28 +238,48 @@ form select {
 
 
     .main {
+        height: 150%;
         display: flex;
         justify-content: center;
     }
 
     .contenedor-meme {
         width: 100%;
-        display: inline-block; 
+        height: 600px;
+        display: flex; 
         justify-content: center;
         align-items: center;
         background-color: var(--colorFondoMeme);
     }
 
     #card {
-        text-align: center;
+        margin: 0;
+        max-width: 30%;
+        height: auto;
+        
     }
+
+    #topcard, #bottomcard {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
     .botones-secundarios {
         display: flex;
         justify-content: center;
     }
 
+
+
+
+
+
     .panel-control-texto {
-        width: 30%;
+        width: 15%;
         background-color: var(--colorFondoHeader);
         color: white;
         padding: 10px;
@@ -274,7 +288,7 @@ form select {
     
     
     .panel-control-imagen {    
-        width: 30%;
+        width: 15%;
         background-color: var(--colorFondoHeader);
         color: white;
         padding: 10px;

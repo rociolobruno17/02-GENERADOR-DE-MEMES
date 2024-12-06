@@ -118,13 +118,6 @@ window.onload = () => {
     });
     
     
-
-    // // Alternar la visibilidad del panel al hacer clic en el botón
-    // $botonTexto.addEventListener('click', () => {
-    // $panelControlTexto.classList.toggle('oculto'); // Alterna la clase 'oculto'
-    // });
-
-    
     
     $botonDescargar.addEventListener("click", () => {
         $card.style.width = "1200px"
@@ -135,21 +128,18 @@ window.onload = () => {
     
     
     
-    
-    
-    
     function reestablecerValores () {
-        $inputTop.value = "Top Text"
-        $inputBottom.value = "Bottom Text"
-        $topCard.innerText = "Top Text"
-        $bottomCard.innerText = "Bottom Text"
+        $inputTop.value = " "
+        $inputBottom.value = " "
+        $topCard.innerText = " "
+        $bottomCard.innerText = " "
         $card.style.backgroundColor = ""
-        $inputAlign.value = ""
-        $inputTamañoFuente.value = ""
-        $inputInterlineado.value = ""
-        $inputFuente.value = ""
-        $inputColorFondo.value = ""
-        $inputColor.value = ""
+        $inputAlign.value = " "
+        $inputTamañoFuente.value = " "
+        $inputInterlineado.value = " "
+        $inputFuente.value = " "
+        $inputColorFondo.value = " "
+        $inputColor.value = " "
 
         $inputBrillo.value = "1"
         $inputOpacidad.value = "1"
@@ -180,6 +170,7 @@ window.onload = () => {
     }
 
     iniciarValores ()
+    
 
     $cargarImagen.addEventListener("click", (event) => {
         event.preventDefault(); // Prevenir el envío del formulario
@@ -188,9 +179,7 @@ window.onload = () => {
             const imgElement = document.createElement("img"); // Crear un elemento <img>
             imgElement.src = imageUrl; // Asignar la URL como fuente
             imgElement.alt = "Imagen del meme"; // Agregar un texto alternativo
-            imgElement.style.maxWidth = "100%"; // Opcional: asegurarte de que la imagen se ajuste
-            imgElement.style.borderRadius = "8px"; // Opcional: estilo extra para bordes redondeados
-    
+            imgElement.style.maxWidth = "100%"; // Opcional: asegurarte de que la imagen se ajuste    
             $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
             $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
         } else {
@@ -198,7 +187,6 @@ window.onload = () => {
         }
     });
     
-
 
 
 
