@@ -1,13 +1,16 @@
+ /* MODO OSCURO Y MODO CLARO*/
+
 .modo-oscuro {
     --colorFondoHeader: #191e2b;
     --colorFondoMeme: #30343f;
 }
 
-
 .modo-claro {
     --colorFondoHeader: #e0e0e0;
     --colorFondoMeme: #eeeeee;
 }
+
+ /* PANELES DE CONTROL VISIBLE Y OCULTO*/
 
 .panel-control-imagen,
 .panel-control-texto {
@@ -18,15 +21,17 @@
     display: block;
 }
 
-
+ /* BODY*/
 
 body {
-    /* width: 100vh; */
+    width: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     transition: background-color 0.5s, color 0.5s;
 }
 
+ /* HEADER */
 
 header {
     width: 100%;
@@ -75,6 +80,15 @@ header {
     border-radius: 10px;
 }
 
+ /* MAIN*/
+
+.main {
+    height: 1500px;
+    background-color: var(--colorFondoMeme);
+
+}
+
+ /* CONTENEDOR DEL MEME CON SUS RESPECTIVOS BOTONES SECUNDARIOS */
 
 .contenedor-meme {
     width: 100%;
@@ -87,7 +101,6 @@ header {
 
 
 #contenedor-imagen {
-    margin-top: 20px;
     text-align: center;
   }
 
@@ -98,26 +111,33 @@ header {
     border-radius: 8px;
   }
 
-form label {
-    display: block;
-    margin-top: 8px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #eeeeee;
+
+  .botones-secundarios {
+    display: flex;
+    gap: 10px; /* Espaciado entre botones */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
-form input,
-form select {
-    width: 70%;
-    margin-bottom: 10px;
-    padding: 5px;
+.botones-secundarios button {
+    padding: 10px 20px;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    color:#30343f;
+    background-color: #4caf50; /* Botón verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botones-secundarios button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
 }
 
 
-
+ /* PANELES DE CONTROL*/
 
 .panel-control-texto {
     width: 100%;
@@ -156,27 +176,24 @@ form select {
     text-align: left;
 }
 
+ /* FORM / INPUTS / LABELS*/
 
-.botones-secundarios {
-    display: flex;
-    gap: 10px; /* Espaciado entre botones */
-    margin-top: 20px;
-}
-
-.botones-secundarios button {
-    padding: 10px 20px;
+ form label {
+    display: block;
+    margin-top: 8px;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    background-color: #4caf50; /* Botón verde */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    color: #eeeeee;
 }
 
-.botones-secundarios button:hover {
-    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+form input,
+form select {
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color:#30343f;
 }
 
 
@@ -184,8 +201,13 @@ form select {
 
 
 
-@media (min-width: 768px) {
+
+
+ /* RESPONSIVE */
+
     /* tablet */
+@media (min-width: 768px) {
+
     header {
         width: 100%;
         height: 125px;
@@ -200,9 +222,8 @@ form select {
 
 }
 
-
+    /* escritorio */
 @media (min-width: 1024px) {
-
 
 .panel-control-imagen,
 .panel-control-texto {

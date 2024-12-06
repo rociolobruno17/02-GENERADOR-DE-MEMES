@@ -119,10 +119,10 @@ window.onload = () => {
     
     
 
-    // Alternar la visibilidad del panel al hacer clic en el botón
-    $botonTexto.addEventListener('click', () => {
-    $panelControlTexto.classList.toggle('oculto'); // Alterna la clase 'oculto'
-    });
+    // // Alternar la visibilidad del panel al hacer clic en el botón
+    // $botonTexto.addEventListener('click', () => {
+    // $panelControlTexto.classList.toggle('oculto'); // Alterna la clase 'oculto'
+    // });
 
     
     
