@@ -31,16 +31,15 @@
 <div class="main">
     <div class="contenedor-meme">
         <div id="card">
-            <h2 id="topcard"></h2>
+            <h2 id="topcard"> Texto superior </h2>
 
             <div id="contenedor-imagen"></div>
 
-            <h2 id="bottomcard"></h2>
+            <h2 id="bottomcard"> Texto inferior </h2>
         </div>
         
         <div class="botones-secundarios">
-            <button id="descargar">Descargar meme</button>
-            <button id="restablecer">Reestablecer todo</button>
+            <button  type="button" id="descargar">Descargar meme</button>
         </div>
     </div>
     
@@ -62,17 +61,21 @@
                 <option value="'Times New Roman', serif">Times New Roman</option>
             </select>
     
+
+            <div id="tipografia">
+                <label>Color</label>
+                <input id="textocolor" type="color" />
+        
+                <label>Fondo</label>
+                <input id="textocolorfondo" type="color" />
+            </div>
+
             <label>Tamaño</label>
             <input id="tamaño-fuente" type="number" min="10" max="100" step="1" value="24" />
     
             <label>Interlineado</label>
             <input id="interlineado" type="number" min="1" max="3" step="0.1" value="1.5" />
     
-            <label>Color</label>
-            <input id="textocolor" type="color" />
-    
-            <label>Fondo</label>
-            <input id="textocolorfondo" type="color" />
     
             <label>Alinear</label>
             <select id="textoalign">
@@ -80,6 +83,9 @@
                 <option value="center">Centro</option>
                 <option value="right">Derecha</option>
             </select>
+
+            <button type="button" id="restablecer">Reestablecer texto</button>
+
         </form>
     </aside>
 
@@ -93,31 +99,34 @@
 
             <h3>FILTROS</h3>
         <label>Brillo</label>
-        <input type="range" id="brillo" min="0" max="1" step="0.1" >
+        <input type="range" id="brillo" min="0" max="1" step="0.1"/>
 
         <label>Opacidad</label>
-        <input type="range" id="opacidad" min="0" max="1" step="0.1" >
+        <input type="range" id="opacidad" min="0" max="1" step="0.1"/>
         
         <label>Contraste</label>
-        <input type="range" id="contraste" min="100" max="1000" step="1" >
+        <input type="range" id="contraste" min="100" max="1000" step="1"/>
 
         <label>Desenfoque</label>
-        <input type="range" id="desenfoque" min="0" max="10" step="0.1" >
+        <input type="range" id="desenfoque" min="0" max="10" step="0.1"/>
 
         <label>Escala de Grises</label>
-        <input type="range" id="grises" min="0" max="100" step="1" >
+        <input type="range" id="grises" min="0" max="100" step="1"/>
 
         <label>Sepia</label>
-        <input type="range" id="sepia" min="0" max="100" step="1" >
+        <input type="range" id="sepia" min="0" max="100" step="1"/>
 
         <label>Hue</label>
-        <input type="range" id="hue" min="0" max="359" step="1" >
+        <input type="range" id="hue" min="0" max="359" step="1"/>
 
         <label>Saturación</label>
-        <input type="range" id="saturacion" min="100" max="1000" step="10" >
+        <input type="range" id="saturacion" min="100" max="1000" step="10"/>
 
         <label>Negativo</label>
-        <input type="range" id="negativo" min="0" max="1" step="0.1" >
+        <input type="range" id="negativo" min="0" max="1" step="0.1"/>
+
+        <button type="button" id="reestablecer-filtros">Reestablecer filtros</button>
+
 
     </form>
     </aside>

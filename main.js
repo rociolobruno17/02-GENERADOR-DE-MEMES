@@ -43,6 +43,9 @@ window.onload = () => {
     const $botonImagen = $(".boton-imagen");
     const $panelImagen = $(".panel-control-imagen");
 
+    const $botonFiltros = $("#reestablecer-filtros");
+
+
 
 
 
@@ -183,47 +186,55 @@ $inputNegativo.addEventListener("input", () => {
 
     
     function reestablecerValores () {
-        $inputTop.value = " "
-        $inputBottom.value = " "
-        $topCard.innerText = " "
-        $bottomCard.innerText = " "
-        $card.style.backgroundColor = ""
-        $inputAlign.value = " "
-        $inputTamañoFuente.value = " "
-        $inputInterlineado.value = " "
-        $inputFuente.value = " "
-        $inputColorFondo.value = " "
-        $inputColor.value = " "
+        $inputTop.value = ""
+        $inputBottom.value = ""
+        $topCard.innerText = " Texto superior"
+        $bottomCard.innerText = "Texto inferior "
+        $card.style.backgroundColor = "white"
+        $inputAlign.value = ""
+        $inputTamañoFuente.value = ""
+        $inputInterlineado.value = ""
+        $inputFuente.value = ""
+        $inputColorFondo.value = ""
+        $inputColor.value = ""
 
-        $inputBrillo.value = "1"
-        $inputOpacidad.value = "1"
-        $inputContraste.value = "100%"
-        $inputDesenfoque.value = "0px"
-        $inputGrises.value = "0%"
-        $inputSepia.value = "0%"
-        $inputHue.value = "0deg"
-        $inputSaturacion.value = "100%"
-        $contenedorImagen.innerHTML = ""
+    
     }
     
     $buttonReestablecer.addEventListener("click", reestablecerValores)
     
     reestablecerValores ()
     
-    
-    function iniciarValores () {
-        $inputBrillo.value = "1"
-        $inputOpacidad.value = "1"
-        $inputContraste.value = "100%"
-        $inputDesenfoque.value = "0px"
-        $inputGrises.value = "0%"
-        $inputSepia.value = "0%"
-        $inputHue.value = "0deg"
-        $inputSaturacion.value = "100%"
+function reestablecerFiltros () {
+    $inputBrillo.value = "1"
+    $inputOpacidad.value = "1"
+    $inputContraste.value = "100"
+    $inputDesenfoque.value = "0"
+    $inputGrises.value = "0"
+    $inputSepia.value = "0"
+    $inputHue.value = "0"
+    $inputSaturacion.value = "100"
+    $inputNegativo.value = "0"
+    $contenedorImagen.style.backgroundImage = ""
+}
 
-    }
+$botonFiltros.addEventListener("click", reestablecerFiltros)
 
-    iniciarValores ()
+
+    // function iniciarValores () {
+    //     $inputBrillo.value = "1"
+    //     $inputOpacidad.value = "1"
+    //     $inputContraste.value = "100"
+    //     $inputDesenfoque.value = "0"
+    //     $inputGrises.value = "0"
+    //     $inputSepia.value = "0"
+    //     $inputHue.value = "0"
+    //     $inputSaturacion.value = "100"
+    //     $inputNegativo.value = "0"
+
+    // }
+
+    // iniciarValores ()
     
 
 
