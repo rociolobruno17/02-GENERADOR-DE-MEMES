@@ -10,6 +10,7 @@ window.onload = () => {
     
     const $body = $("body")
     const $botonModo = $(".boton-modo")
+
     const $inputTop = $("#textotop")
     const $inputBottom = $("#textobottom")
     const $inputColor = $("#textocolor")
@@ -24,6 +25,7 @@ window.onload = () => {
     const $inputTamañoFuente = $("#tamaño-fuente");
     const $inputInterlineado = $("#interlineado");
     const $inputBrillo = $("#brillo");
+
     const $inputOpacidad = $("#opacidad");
     const $inputContraste = $("#contraste");
     const $inputDesenfoque = $("#desenfoque");
@@ -32,6 +34,7 @@ window.onload = () => {
     const $inputHue = $("#hue");
     const $inputSaturacion = $("#saturacion");
     const $inputNegativo = $("#negativo");
+
     const $contenedorImagen = $("#contenedor-imagen");
     const $urlImagen = $("#url-imagen");
     const $cargarImagen = $("#cargar-imagen");
@@ -44,8 +47,7 @@ window.onload = () => {
 
 
 
-    
-    
+ // Función para aplicar modo claro y modo oscuro
     
     $botonModo.addEventListener("click", () => {
         if ($body.classList.contains("modo-oscuro")) {
@@ -73,11 +75,66 @@ window.onload = () => {
 });
 
 
+// Función para que el usuario cargue la URL de una imagen en el panel de imagen
+
+$cargarImagen.addEventListener("click", () => {
+    // event.preventDefault(); // Prevenir el envío del formulario
+    // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
+    // if (imageUrl) {
+    //     const imgElement = document.createElement("img"); // Crear un elemento <img>
+    //     imgElement.src = imageUrl; // Asignar la URL como fuente
+    //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
+    //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
+    //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
+    // } else {
+    //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
+    // }
+
+    $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
+});
+
+// Función para editar el panel de imagen
+
+$inputBrillo.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`;
+});
 
 
-
+$inputOpacidad.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`;
+});
 
     
+$inputContraste.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `contrast(${$inputContraste.value}%)`;
+});
+
+$inputDesenfoque.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value}px)`;
+});
+
+$inputGrises.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value}%)`;
+});
+
+$inputSepia.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `sepia	(${$inputSepia.value}%)`;
+});
+
+$inputHue.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value}deg)`;
+});
+
+$inputSaturacion.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value}%)`;
+});
+
+$inputNegativo.addEventListener("input", () => {
+    $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`;
+});
+
+
+// Función para editar el panel de texto
     
     
     $inputTop.addEventListener("input", () => {
@@ -117,6 +174,10 @@ window.onload = () => {
         $bottomCard.style.lineHeight = lineHeight;
     });
     
+
+    
+    
+        
     
     
 
@@ -168,35 +229,8 @@ window.onload = () => {
 
 
 
-
-
-
-
-
-
-    
-
-    $cargarImagen.addEventListener("click", (event) => {
-        // event.preventDefault(); // Prevenir el envío del formulario
-        // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
-        // if (imageUrl) {
-        //     const imgElement = document.createElement("img"); // Crear un elemento <img>
-        //     imgElement.src = imageUrl; // Asignar la URL como fuente
-        //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
-        //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
-        //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
-        // } else {
-        //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
-        // }
-
-        $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
-
-
-    });
-
-
     $botonDescargar.addEventListener("click", () => {
-        $card.style.width = "1200px"
+        $card.style.width = "500px"
         domtoimage.toBlob($card).then((blob) => {
             saveAs(blob, "mi-meme.png");
           });
@@ -213,48 +247,6 @@ window.onload = () => {
 
     
 
-
-
-    $inputBrillo.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`
-    })
-
-    
-    $inputOpacidad.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`
-    })
-
-        
-    $inputContraste.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `contrast(${$inputContraste.value})`
-    })
-
-    $inputDesenfoque.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value})`
-    })
-
-    $inputGrises.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value})`
-    })
-
-    $inputSepia.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `sepia	(${$inputSepia.value})`
-    })
-
-    $inputHue.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value})`
-    })
-
-    $inputSaturacion.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value})`
-    })
-    
-    $inputNegativo.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`
-    })
-    
-    
-    
 
 
 

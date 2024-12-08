@@ -93,6 +93,8 @@ header {
 
 .contenedor-meme {
     width: 100%;
+    height:500px;
+
     display: flex; /* Cambia de block a flex */
     justify-content: center;
     align-items: center;
@@ -100,9 +102,15 @@ header {
     flex-direction: column; /* Alinea elementos en columna */
 }
 
+#card {
+    width: 500px ;
+    height:500px;
+
+}
+
 #contenedor-imagen {
-    width: 200px ;
-    height:200px;
+    width: 450px ;
+    height:300px;
     background-position: center;
     background-size: cover;
 }
@@ -237,7 +245,7 @@ form select {
 }
 
 
-    /* escritorio */
+    escritorio
 
     header {
         width: 100%;
@@ -253,17 +261,26 @@ form select {
 
     .contenedor-meme {
         width: 100%;
-        height: 600px;
-        display: flex; 
+        height:700px;
+    
+        display: flex; /* Cambia de block a flex */
         justify-content: center;
         align-items: center;
         background-color: var(--colorFondoMeme);
+        flex-direction: column; /* Alinea elementos en columna */
     }
-
+    
     #card {
-        margin: 0;
-        max-width: 450px;
-        height: auto;
+        width: 500px ;
+        height:500px;
+    
+    }
+    
+    #contenedor-imagen {
+        width: 500px ;
+        height:400px;
+        background-position: center;
+        background-size: cover;
     }
 
     #topcard, #bottomcard {
