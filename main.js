@@ -192,13 +192,15 @@ $inputNegativo.addEventListener("input", () => {
         $bottomCard.innerText = "Texto inferior "
         $card.style.backgroundColor = "white"
         $inputAlign.value = ""
-        $inputTamañoFuente.value = ""
+        $inputTamañoFuente.value = "arial"
         $inputInterlineado.value = ""
         $inputFuente.value = ""
         $inputColorFondo.value = ""
         $inputColor.value = ""
 
-    
+        $topCard.style.fontFamily = "Arial, sans-serif";
+        $bottomCard.style.fontFamily = "Arial, sans-serif";
+
     }
     
     $buttonReestablecer.addEventListener("click", reestablecerValores)
