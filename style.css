@@ -1,13 +1,37 @@
  /* MODO OSCURO Y MODO CLARO*/
 
 .modo-oscuro {
-    --colorFondoHeader: #191e2b;
-    --colorFondoMeme: #30343f;
+    --colorFondoHeader: #030020;
+
+    --colorFondoMeme: #000001;
+
+    --colorTexto: #ffffff; /* Color del texto para modo oscuro */
+    --colorTextoInputs:#333333; /* Color del texto para modo oscuro */
+
+    --colorFondoBotones: #50007f;
+    --colorFondoBotonesRGB: 80, 0, 127; /* Valor RGB del color */
+
+    --colorTextoBotones: rgb(255, 255, 255); /* Color del texto */
+    
+    --colorTextoBotonesSecundarios: #FFFFFF; /* Color del texto */
+
 }
 
 .modo-claro {
-    --colorFondoHeader: #e0e0e0;
-    --colorFondoMeme: #eeeeee;
+    --colorFondoHeader:#fafafa;
+
+    --colorFondoMeme: #e8e8e8;
+
+    --colorTexto:#333333; /* Color del texto para modo oscuro */
+
+
+    --colorFondoBotones: #50007f;
+    --colorFondoBotonesRGB: 80, 0, 127; /* Valor RGB del color */
+
+    --colorTextoBotones: #FFFFFF; /* Color del texto */
+
+    --colorTextoBotonesSecundarios: #50007f; /* Color del texto */
+
 }
 
  /* PANELES DE CONTROL VISIBLE Y OCULTO*/
@@ -45,9 +69,9 @@ header {
 
 .titulo-app {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
-    color: white;
-    margin-top: 30px;
+    font-size: 38px;
+    color:#50007f;
+    margin-top: 50px;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -57,6 +81,9 @@ header {
     display: flex;
     justify-content: space-between;
 }
+.contenedor-botones-principales button i {
+    padding: 8px;
+}
 
 .contenedor-botones-principales button {
     margin: 5px;
@@ -64,7 +91,7 @@ header {
     height: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: white;
+    color:var(--colorTexto);
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
@@ -74,11 +101,9 @@ header {
 }
 
 .contenedor-botones-principales button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Fondo claro al hacer hover */
-    color: #ececec;
-    /* Cambia el color del texto a un tono claro */
     border-radius: 3px;
+    color: var(--colorTextoBotones);
+    background-color: var(--colorFondoBotones);
 }
 
  /* MAIN*/
@@ -115,12 +140,6 @@ header {
     background-size: cover;
 }
 
-/* 
-#contenedor-imagen img {
-    max-width: 100%;
-    height: auto;
-  } */
-
 
   .botones-secundarios {
     display: flex;
@@ -134,25 +153,26 @@ header {
     padding: 10px 20px;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    background-color: #4caf50; /* Botón verde */
-    color: white;
+    background-color:var(--colorFondoBotones);
+    color:var(--colorTextoBotones);
     border: none;
-    border-radius: 5px;
+    border-radius: 16px; /* Mantiene el diseño redondeado */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .botones-secundarios button:hover {
-    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+    background-color: var(--colorFondoBotones); /* Mantiene el color de fondo */
+    box-shadow: 0 4px 8px rgba(var(--colorFondoBotonesRGB), 0.5); /* Sombra dinámica */
 }
 
 
- /* PANELES DE CONTROL*/
+ /* PANELES DE CONTROL DE TEXTO*/
 
 .panel-control-texto {
     width: 100%;
     background-color: var(--colorFondoHeader);
-    color: white;
+    color:var(--colorTexto);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -160,14 +180,35 @@ header {
 .panel-control-texto h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: white;
+    color:var(--colorTexto);
     text-align: left;
 }
+
+#restablecer {
+    padding: 8px 18px; /* Tamaño ligeramente más pequeño */
+    font-family: Arial, sans-serif;
+    font-size: 13px; /* Fuente más pequeña */
+    font-weight: bold;
+    background-color: transparent; /* Fondo transparente */
+    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
+    border: 2px solid var(--colorFondoBotones); /* Borde para diferenciarlo */
+    border-radius: 16px; /* Mantiene el diseño redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+#restablecer  button:hover {
+    background-color: var(--colorFondoBotones);
+    color: var(--colorTextoBotones);
+    box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3); /* Sombra más sutil */
+}
+
+ /* PANELES DE CONTROL DE IMAGEN*/
 
 .panel-control-imagen {
     width: 100%;
     background-color: var(--colorFondoHeader);
-    color: white;
+    color:var(--colorTexto);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -175,16 +216,56 @@ header {
 .panel-control-imagen h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: white;
+    color:var(--colorTexto);
     text-align: left;
 }
 
 .panel-control-imagen h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: white;
+    color:var(--colorTexto);
     text-align: left;
 }
+
+.panel-control-imagen #cargar-imagen {
+    padding: 8px 18px; /* Tamaño ligeramente más pequeño */
+    font-family: Arial, sans-serif;
+    font-size: 13px; /* Fuente más pequeña */
+    font-weight: bold;
+    background-color: transparent; /* Fondo transparente */
+    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
+    border: 2px solid var(--colorFondoBotones); /* Borde para diferenciarlo */
+    border-radius: 16px; /* Mantiene el diseño redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+
+.panel-control-imagen #cargar-imagen  button:hover {
+    background-color: var(--colorFondoBotones);
+    color: var(--colorTextoBotones);
+    box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3); /* Sombra más sutil */
+}
+
+.boton-filtros #reestablecer-filtros {
+    padding: 8px 18px; /* Tamaño ligeramente más pequeño */
+    font-family: Arial, sans-serif;
+    font-size: 13px; /* Fuente más pequeña */
+    font-weight: bold;
+    background-color: transparent; /* Fondo transparente */
+    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
+    border: 2px solid var(--colorFondoBotones); /* Borde para diferenciarlo */
+    border-radius: 16px; /* Mantiene el diseño redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.boton-filtros #reestablecer-filtros button:hover {
+    background-color: var(--colorFondoBotones); /* Mantiene el color de fondo */
+    box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5); /* Sombra dinámica */
+}
+
+
 
  /* FORM / INPUTS / LABELS*/
 
@@ -193,7 +274,7 @@ header {
     margin-top: 5px;
     font-family: Arial, sans-serif;
     font-size: 12px;
-    color: #eeeeee;
+    color:var(--colorTexto);
 }
 
 form input,
@@ -204,7 +285,7 @@ form select {
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 12px;
-    color:#30343f;
+    color:var(--colorTextoInputs);
 }
 
 form #tipografia {
@@ -319,7 +400,7 @@ form #tipografia {
     .panel-control-texto {
         width: 15%;
         background-color: var(--colorFondoHeader);
-        color: white;
+        color:var(--colorTexto);
         padding: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
@@ -328,7 +409,7 @@ form #tipografia {
     .panel-control-imagen {    
         width: 15%;
         background-color: var(--colorFondoHeader);
-        color: white;
+        color:var(--colorTexto);
         padding: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }

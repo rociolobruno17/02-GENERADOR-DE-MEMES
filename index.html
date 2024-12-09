@@ -14,17 +14,25 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+
+    <!-- ICONOS IMPORTADOS DE FLATICON -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
     <title>Generador de Memes</title>
 </head>
 
 <body class="modo-oscuro">
 
     <header>
-        <h1 class="titulo-app">Generador de memes</h1>
+        <h1 class="titulo-app">GENERADOR DE MEMES</h1>
         <div class="contenedor-botones-principales">
-            <button class="boton-imagen" type="button" aria-label="Abrir panel de imagen">Imagen</button>
-            <button class="boton-texto" type="button" aria-label="Abrir panel de texto">Texto</button>
-            <button class="boton-modo" type="button" aria-label="Cambiar a modo oscuro">Modo oscuro</button>
+            <button class="boton-imagen" type="button" aria-label="Abrir panel de imagen"><i class="fi fi-br-graphic-style"></i>Imagen</button>
+            <button class="boton-texto" type="button" aria-label="Abrir panel de texto"><i class="fi fi-rr-text-box"></i>Texto</button>
+            <button class="boton-modo" type="button" aria-label="Cambiar a modo oscuro">
+                <i id="icono-modo" class="fi fi-rr-moon-stars"></i>
+                <span id="texto-modo">Modo oscuro</span>
+            </button>
         </div>
     </header>
 
@@ -85,7 +93,6 @@
             </select>
 
             <button type="button" id="restablecer">Reestablecer texto</button>
-
         </form>
     </aside>
 
@@ -125,7 +132,9 @@
         <label>Negativo</label>
         <input type="range" id="negativo" min="0" max="1" step="0.1"/>
 
+        <div class="boton-filtros">
         <button type="button" id="reestablecer-filtros">Reestablecer filtros</button>
+        </div>
 
 
     </form>

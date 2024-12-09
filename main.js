@@ -10,6 +10,13 @@ window.onload = () => {
     
     const $body = $("body")
     const $botonModo = $(".boton-modo")
+    const $iconoModo = $("#icono-modo")
+    const $textoModo = $("#texto-modo")
+
+
+
+
+
 
     const $inputTop = $("#textotop")
     const $inputBottom = $("#textobottom")
@@ -54,15 +61,31 @@ window.onload = () => {
     
     $botonModo.addEventListener("click", () => {
         if ($body.classList.contains("modo-oscuro")) {
+
+                    // Cambiar a modo claro
             $body.classList.remove("modo-oscuro");
             $body.classList.add("modo-claro");
-            $botonModo.innerText = "Modo oscuro" // Actualiza el texto
+
+                    // Actualizar icono y texto
+            $iconoModo.classList.remove("fi-rr-moon-stars");
+            $iconoModo.classList.add("fi-rr-brightness");
+            $textoModo.textContent = "Modo claro";
+
         } else {
+            
+                    // Cambiar a modo oscuro
             $body.classList.remove("modo-claro");
             $body.classList.add("modo-oscuro");
-            $botonModo.innerText = "Modo claro" // Actualiza el texto
+
+                    // Actualizar icono y texto
+            $iconoModo.classList.remove("fi-rr-brightness");
+            $iconoModo.classList.add("fi-rr-moon-stars");
+            $textoModo.textContent = "Modo oscuro";
         }
     });
+
+
+    
     
     
     // Función para mostrar el panel de imagen y ocultar el de texto
