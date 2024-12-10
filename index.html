@@ -15,9 +15,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
 
+    <!-- FAVICON -->
+
+
     <!-- ICONOS IMPORTADOS DE FLATICON -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    
+    <!-- FUENTE DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
 
     <title>Generador de Memes</title>
 </head>
@@ -79,10 +87,10 @@
             </div>
 
             <label>Tamaño</label>
-            <input id="tamaño-fuente" type="number" min="10" max="100" step="1" value="24" />
+            <input id="tamaño-fuente" type="number" min="10" max="100" step="1" />
     
             <label>Interlineado</label>
-            <input id="interlineado" type="number" min="1" max="3" step="0.1" value="1.5" />
+            <input id="interlineado" type="number" min="1" max="3" step="0.1" />
     
     
             <label>Alinear</label>
@@ -105,6 +113,7 @@
             <button type="button" id="cargar-imagen">Cargar Imagen</button> 
 
             <h3>FILTROS</h3>
+            <div id="filtros">
             <label for="brillo">Brillo</label>
             <input type="range" id="brillo" min="0" max="1" step="0.1"/>
             
@@ -135,7 +144,7 @@
         <div class="boton-filtros">
         <button type="button" id="reestablecer-filtros">Reestablecer filtros</button>
         </div>
-
+    </div>
 
     </form>
     </aside>
