@@ -72,14 +72,12 @@ header {
 }
 
 .titulo-app {
-    margin-top: 50px;
-    margin: 10px;
-    padding: 10px;
+    padding-top: 20px;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    font-size: 38px;
+    font-size: 27px;
     color:var(--colorTexto);
     text-align: center;
 }
@@ -89,7 +87,7 @@ header {
     justify-content: space-between;
 }
 .contenedor-botones-principales button i {
-    padding: 8px;
+    padding: 5px;
 }
 
 .contenedor-botones-principales button {
@@ -404,7 +402,7 @@ form #tipografia {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "Raleway", sans-serif;
+        font-family: "Orbitron", sans-serif;
         font-size: 24px;
     }
 
