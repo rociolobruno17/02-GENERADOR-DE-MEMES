@@ -62,6 +62,8 @@
     <aside class="panel-control-texto">
     <form>
             <h2>TEXTO</h2>
+            <div id="textos">
+
             <label>Texto Superior</label>
             <input id="textotop" type="text" placeholder="Escribe aquí..." />
     
@@ -101,45 +103,47 @@
             </select>
 
             <button type="button" id="restablecer">Reestablecer texto</button>
+        </div>
         </form>
     </aside>
 
 
     <aside class="panel-control-imagen">
     <form>
+        <div id="filtros">
             <h2>IMAGEN</h2>
 
             <input type="text" id="url-imagen" placeholder="Ingresa la URL de la imagen" />
             <button type="button" id="cargar-imagen">Cargar Imagen</button> 
 
             <h3>FILTROS</h3>
-            <div id="filtros">
+
             <label for="brillo">Brillo</label>
-            <input type="range" id="brillo" min="0" max="1" step="0.1"/>
+            <input type="range" id="brillo" class="accent" min="0" max="1" step="0.1"/>
             
             <label for="opacidad">Opacidad</label>
-            <input type="range" id="opacidad" min="0" max="1" step="0.1"/>
+            <input type="range" id="opacidad" class="accent" min="0" max="1" step="0.1"/>
             
             <label for="contraste">Contraste</label>
-            <input type="range" id="contraste" min="100" max="1000" step="1"/>
+            <input type="range" id="contraste" class="accent" min="100" max="1000" step="1"/>
             
             <label for="desenfoque">Desenfoque</label>
-            <input type="range" id="desenfoque" min="0" max="10" step="0.1"/>
+            <input type="range" id="desenfoque" class="accent" min="0" max="10" step="0.1"/>
             
             <label for="grises">Escala de Grises</label>
-            <input type="range" id="grises" min="0" max="100" step="1"/>
+            <input type="range" id="grises" class="accent" min="0" max="100" step="1"/>
             
             <label for="sepia">Sepia</label>
-            <input type="range" id="sepia" min="0" max="100" step="1"/>
+            <input type="range" id="sepia" class="accent" min="0" max="100" step="1"/>
             
             <label for="hue">Hue</label>
-            <input type="range" id="hue" min="0" max="359" step="1"/>
+            <input type="range" id="hue" class="accent" min="0" max="359" step="1"/>
             
             <label for="saturacion">Saturación</label>
-            <input type="range" id="saturacion" min="100" max="1000" step="10"/>
+            <input type="range" id="saturacion" class="accent" min="100" max="1000" step="10"/>
             
             <label for="negativo">Negativo</label>
-            <input type="range" id="negativo" min="0" max="1" step="0.1"/>
+            <input type="range" id="negativo" class="accent" min="0" max="1" step="0.1"/>
 
         <div class="boton-filtros">
         <button type="button" id="reestablecer-filtros">Reestablecer filtros</button>
