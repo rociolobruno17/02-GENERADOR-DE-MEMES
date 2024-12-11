@@ -145,23 +145,23 @@ window.onload = () => {
     });
 
     $inputGrises.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value}%)`;
+        $contenedorImagen.style.filter = `grayscale(${$inputGrises.value}%)`;
     });
 
     $inputSepia.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `sepia	(${$inputSepia.value}%)`;
+        $contenedorImagen.style.filter = `sepia(${$inputSepia.value}%)`;
     });
 
     $inputHue.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value}deg)`;
+        $contenedorImagen.style.filter = `hue-rotation(${$inputHue.value}deg)`;
     });
 
     $inputSaturacion.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value}%)`;
+        $contenedorImagen.style.filter = `saturation(${$inputSaturacion.value}%)`;
     });
 
     $inputNegativo.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`;
+        $contenedorImagen.style.filter = `invert(${$inputNegativo.value})`;
     });
 
 
@@ -277,10 +277,13 @@ window.onload = () => {
     // Función para descargar imagen
 
     $botonDescargar.addEventListener("click", () => {
-        $card.style.width = "500px"
+        // $card.style.width = "500px"
         domtoimage.toBlob($card).then((blob) => {
             saveAs(blob, "mi-meme.png");
-        });
+        }).catch((error) =>{
+            console.log (error)
+        } ) ;
+    
     })
 
 
