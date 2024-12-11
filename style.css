@@ -1,9 +1,9 @@
  /* MODO OSCURO Y MODO CLARO*/
 
 .modo-oscuro {
-    --colorFondoHeader: #030020;
+    --colorFondoHeader: hsl(278, 100%, 10%);
 
-    --colorFondoMeme: #000001;
+    --colorFondoMeme: hsl(278, 100%, 5%);
 
     --colorTexto: #ffffff; /* Color del texto para modo oscuro */
     --colorTextoInputs:#333333; /* Color del texto para modo oscuro */
@@ -13,7 +13,7 @@
 
     --colorTextoBotones: rgb(255, 255, 255); /* Color del texto */
     
-    --colorTextoBotonesSecundarios: #FFFFFF; /* Color del texto */
+    --colorTextoBotonesSecundarios:#ffffff; /* Color del texto */
 
     --colorFondoLabel:#e8e8e8;
 
@@ -32,7 +32,7 @@
     --colorFondoBotones: #50007f;
     --colorFondoBotonesRGB: 80, 0, 127; /* Valor RGB del color */
 
-    --colorTextoBotones: #FFFFFF; /* Color del texto */
+    --colorTextoBotones:#ffffff; /* Color del texto */
 
     --colorTextoBotonesSecundarios: #50007f; /* Color del texto */
 
@@ -351,6 +351,8 @@ form #tipografia {
 
 
 }
+
+
 
  /* PANEL DE IMAGEN / FORM / INPUTS / LABELS*/
 

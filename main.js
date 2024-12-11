@@ -3,20 +3,15 @@ window.onload = () => {
     // domtoimage.toBlob($card).then((blob) => {
     //     saveAs(blob, "my-meme.png");
     //   });
-    
+
     function $(element) {
-        return document.querySelector (element)
+        return document.querySelector(element)
     }
-    
+
     const $body = $("body")
     const $botonModo = $(".boton-modo")
     const $iconoModo = $("#icono-modo")
     const $textoModo = $("#texto-modo")
-
-
-
-
-
 
     const $inputTop = $("#textotop")
     const $inputBottom = $("#textobottom")
@@ -49,7 +44,6 @@ window.onload = () => {
     const $panelTexto = $(".panel-control-texto");
     const $botonImagen = $(".boton-imagen");
     const $panelImagen = $(".panel-control-imagen");
-
     const $botonFiltros = $("#reestablecer-filtros");
 
 
@@ -57,27 +51,27 @@ window.onload = () => {
 
 
 
- // Función para aplicar modo claro y modo oscuro
-    
+    // Función para aplicar modo claro y modo oscuro
+
     $botonModo.addEventListener("click", () => {
         if ($body.classList.contains("modo-oscuro")) {
 
-                    // Cambiar a modo claro
+            // Cambiar a modo claro
             $body.classList.remove("modo-oscuro");
             $body.classList.add("modo-claro");
 
-                    // Actualizar icono y texto
+            // Actualizar icono y texto
             $iconoModo.classList.remove("fi-rr-moon-stars");
             $iconoModo.classList.add("fi-rr-brightness");
             $textoModo.textContent = "Modo claro";
 
         } else {
-            
-                    // Cambiar a modo oscuro
+
+            // Cambiar a modo oscuro
             $body.classList.remove("modo-claro");
             $body.classList.add("modo-oscuro");
 
-                    // Actualizar icono y texto
+            // Actualizar icono y texto
             $iconoModo.classList.remove("fi-rr-brightness");
             $iconoModo.classList.add("fi-rr-moon-stars");
             $textoModo.textContent = "Modo oscuro";
@@ -85,168 +79,187 @@ window.onload = () => {
     });
 
 
-    
-    
-    
+
+
+
     // Función para mostrar el panel de imagen y ocultar el de texto
+
     $botonImagen.addEventListener('click', () => {
-    $panelImagen.classList.add('panel-visible');
-    $panelTexto.classList.remove('panel-visible');
-});
+        $panelImagen.classList.add('panel-visible');
+        $panelTexto.classList.remove('panel-visible');
+    });
 
-// Función para mostrar el panel de texto y ocultar el de imagen
+
+    // Función para mostrar el panel de texto y ocultar el de imagen
     $botonTexto.addEventListener('click', () => {
-    $panelTexto.classList.add('panel-visible');
-    $panelImagen.classList.remove('panel-visible');
-});
+        $panelTexto.classList.add('panel-visible');
+        $panelImagen.classList.remove('panel-visible');
+    });
 
 
-// Función para que el usuario cargue la URL de una imagen en el panel de imagen
-
-$cargarImagen.addEventListener("click", () => {
-    // event.preventDefault(); // Prevenir el envío del formulario
-    // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
-    // if (imageUrl) {
-    //     const imgElement = document.createElement("img"); // Crear un elemento <img>
-    //     imgElement.src = imageUrl; // Asignar la URL como fuente
-    //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
-    //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
-    //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
-    // } else {
-    //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
-    // }
-
-    $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
-});
-
-// Función para editar el panel de imagen
-
-$inputBrillo.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`;
-});
 
 
-$inputOpacidad.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`;
-});
-
-    
-$inputContraste.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `contrast(${$inputContraste.value}%)`;
-});
-
-$inputDesenfoque.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value}px)`;
-});
-
-$inputGrises.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value}%)`;
-});
-
-$inputSepia.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `sepia	(${$inputSepia.value}%)`;
-});
-
-$inputHue.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value}deg)`;
-});
-
-$inputSaturacion.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value}%)`;
-});
-
-$inputNegativo.addEventListener("input", () => {
-    $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`;
-});
 
 
-// Función para editar el panel de texto
-    
-    
+    // Función para que el usuario cargue la URL de una imagen en el panel de imagen
+
+    $cargarImagen.addEventListener("click", () => {
+        // event.preventDefault(); // Prevenir el envío del formulario
+        // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
+        // if (imageUrl) {
+        //     const imgElement = document.createElement("img"); // Crear un elemento <img>
+        //     imgElement.src = imageUrl; // Asignar la URL como fuente
+        //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
+        //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
+        //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
+        // } else {
+        //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
+        // }
+
+        $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
+    });
+
+
+
+
+
+
+    // Función para editar el panel de imagen
+
+    $inputBrillo.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`;
+    });
+
+
+    $inputOpacidad.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`;
+    });
+
+
+    $inputContraste.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `contrast(${$inputContraste.value}%)`;
+    });
+
+    $inputDesenfoque.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value}px)`;
+    });
+
+    $inputGrises.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `grayscale	(${$inputGrises.value}%)`;
+    });
+
+    $inputSepia.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `sepia	(${$inputSepia.value}%)`;
+    });
+
+    $inputHue.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `hue-rotation (${$inputHue.value}deg)`;
+    });
+
+    $inputSaturacion.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `saturation (${$inputSaturacion.value}%)`;
+    });
+
+    $inputNegativo.addEventListener("input", () => {
+        $contenedorImagen.style.filter = `invert (${$inputNegativo.value})`;
+    });
+
+
+
+    // Función para editar el panel de texto
+
+
     $inputTop.addEventListener("input", () => {
         $topCard.innerText = $inputTop.value
     })
-    
+
     $inputBottom.addEventListener("input", () => {
         $bottomCard.innerText = $inputBottom.value
     })
-    
+
     $inputColor.addEventListener("input", () => {
         $card.style.color = $inputColor.value
     })
-    
+
     $inputColorFondo.addEventListener("input", () => {
         $card.style.backgroundColor = $inputColorFondo.value
     })
-    
+
     $inputAlign.addEventListener("input", () => {
         $card.style.textAlign = $inputAlign.value
     })
-    
+
     $inputFuente.addEventListener("input", () => {
         $topCard.style.fontFamily = $inputFuente.value;
         $bottomCard.style.fontFamily = $inputFuente.value;
     });
-    
+
     $inputTamañoFuente.addEventListener("input", () => {
         const tamaño = `${$inputTamañoFuente.value}px`;
         $topCard.style.fontSize = tamaño;
         $bottomCard.style.fontSize = tamaño;
     });
-    
+
     $inputInterlineado.addEventListener("input", () => {
         const lineHeight = $inputInterlineado.value;
         $topCard.style.lineHeight = lineHeight;
         $bottomCard.style.lineHeight = lineHeight;
     });
-    
 
-    
-    
-        
-    
-    
 
-    
-    function reestablecerValores () {
+
+
+
+
+
+    // Función para restablecer valores en el panel de texto
+
+
+    function reestablecerValores() {
         $inputTop.value = ""
         $inputBottom.value = ""
         $topCard.innerText = " Texto superior"
         $bottomCard.innerText = "Texto inferior "
         $card.style.backgroundColor = "white"
-        $inputAlign.value = ""
-        $inputTamañoFuente.value = "arial"
-        $inputInterlineado.value = ""
-        $inputFuente.value = ""
-        $inputColorFondo.value = ""
-        $inputColor.value = ""
+        $inputAlign.value = "center"
+        $inputTamañoFuente.value = "21"
+        $inputInterlineado.value = "1.5"
+        $inputFuente.value = "'Courier New', monospace";
+        $inputColorFondo.value =  "#ffffff"; 
+        $inputColor.value =  "#50007f";
 
-        $topCard.style.fontFamily = "Arial, sans-serif";
-        $bottomCard.style.fontFamily = "Arial, sans-serif";
+        $topCard.style.fontFamily =  "'Courier New', monospace";
+        $bottomCard.style.fontFamily = "'Courier New', monospace";
 
     }
-    
+
     $buttonReestablecer.addEventListener("click", reestablecerValores)
-    
-    reestablecerValores ()
-    
-function reestablecerFiltros () {
-    $inputBrillo.value = "1"
-    $inputOpacidad.value = "1"
-    $inputContraste.value = "100"
-    $inputDesenfoque.value = "0"
-    $inputGrises.value = "0"
-    $inputSepia.value = "0"
-    $inputHue.value = "0"
-    $inputSaturacion.value = "100"
-    $inputNegativo.value = "0"
-    $contenedorImagen.style.backgroundImage = ""
-}
 
-$botonFiltros.addEventListener("click", reestablecerFiltros)
+    reestablecerValores()
 
 
-    // function iniciarValores () {
+
+        // Función para restablecer filtros en el panel de imagen
+
+
+    function reestablecerFiltros() {
+        $inputBrillo.value = "1"
+        $inputOpacidad.value = "1"
+        $inputContraste.value = "100"
+        $inputDesenfoque.value = "0"
+        $inputGrises.value = "0"
+        $inputSepia.value = "0"
+        $inputHue.value = "0"
+        $inputSaturacion.value = "100"
+        $inputNegativo.value = "1"
+        $contenedorImagen.style.backgroundImage = ""
+    }
+
+    $botonFiltros.addEventListener("click", reestablecerFiltros)
+
+
+    // // Función para iniciar valores de filtros en el panel de imagen
+    // function iniciarValores() {
     //     $inputBrillo.value = "1"
     //     $inputOpacidad.value = "1"
     //     $inputContraste.value = "100"
@@ -256,32 +269,19 @@ $botonFiltros.addEventListener("click", reestablecerFiltros)
     //     $inputHue.value = "0"
     //     $inputSaturacion.value = "100"
     //     $inputNegativo.value = "0"
-
     // }
-
-    // iniciarValores ()
-    
+    // iniciarValores()
 
 
 
+    // Función para descargar imagen
 
     $botonDescargar.addEventListener("click", () => {
         $card.style.width = "500px"
         domtoimage.toBlob($card).then((blob) => {
             saveAs(blob, "mi-meme.png");
-          });
+        });
     })
-    
-    
-
-
-
-
-
-
-
-
-    
 
 
 
@@ -293,4 +293,15 @@ $botonFiltros.addEventListener("click", reestablecerFiltros)
 
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+}
