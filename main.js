@@ -127,41 +127,50 @@ window.onload = () => {
     // Función para editar el panel de imagen
 
     $inputBrillo.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `brightness(${$inputBrillo.value})`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} brightness(${$inputBrillo.value})`;
     });
 
 
     $inputOpacidad.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `opacity(${$inputOpacidad.value})`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} opacity(${$inputOpacidad.value})`;
     });
 
 
     $inputContraste.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `contrast(${$inputContraste.value}%)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} contrast(${$inputContraste.value}%)`;
     });
 
     $inputDesenfoque.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `blur(${$inputDesenfoque.value}px)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} blur(${$inputDesenfoque.value}px)`;
     });
 
     $inputGrises.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `grayscale(${$inputGrises.value}%)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} grayscale(${$inputGrises.value}%)`;
     });
 
     $inputSepia.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `sepia(${$inputSepia.value}%)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} sepia(${$inputSepia.value}%)`;
     });
 
     $inputHue.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `hue-rotation(${$inputHue.value}deg)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} hue-rotation(${$inputHue.value}deg)`;
     });
 
     $inputSaturacion.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `saturation(${$inputSaturacion.value}%)`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} saturation(${$inputSaturacion.value}%)`;
     });
 
     $inputNegativo.addEventListener("input", () => {
-        $contenedorImagen.style.filter = `invert(${$inputNegativo.value})`;
+        let aux = $contenedorImagen.style.filter;
+        $contenedorImagen.style.filter = `${aux} invert(${$inputNegativo.value})`;
     });
 
 
