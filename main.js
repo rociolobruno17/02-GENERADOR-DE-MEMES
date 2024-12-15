@@ -46,6 +46,11 @@ window.onload = () => {
     const $panelImagen = $(".panel-control-imagen");
     const $botonFiltros = $("#reestablecer-filtros");
 
+    const $botonCerrarTexto = $("#cerrar-texto");
+    const $botonCerrarImagen = $("#cerrar-imagen");
+
+
+
 
 
 
@@ -63,7 +68,7 @@ window.onload = () => {
             // Actualizar icono y texto
             $iconoModo.classList.remove("fi-rr-moon-stars");
             $iconoModo.classList.add("fi-rr-brightness");
-            $textoModo.textContent = "Modo claro";
+            $textoModo.textContent = "Claro";
 
         } else {
 
@@ -74,7 +79,7 @@ window.onload = () => {
             // Actualizar icono y texto
             $iconoModo.classList.remove("fi-rr-brightness");
             $iconoModo.classList.add("fi-rr-moon-stars");
-            $textoModo.textContent = "Modo oscuro";
+            $textoModo.textContent = "Oscuro";
         }
     });
 
@@ -96,6 +101,13 @@ window.onload = () => {
         $panelImagen.classList.remove('panel-visible');
     });
 
+    $botonCerrarTexto.addEventListener('click', () => {
+     $panelTexto.style.display = "none"
+    });
+
+    $botonCerrarImagen.addEventListener('click', () => {
+        $panelImagen.style.display = "none"
+       });
 
 
 

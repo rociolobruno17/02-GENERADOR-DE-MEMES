@@ -1,226 +1,269 @@
  /* MODO OSCURO Y MODO CLARO*/
 
-.modo-oscuro {
-    --colorFondoHeader: hsl(278, 100%, 10%);
+ .modo-oscuro {
+     --colorFondoHeader: hsl(278, 100%, 10%);
 
-    --colorFondoMeme: hsl(278, 100%, 5%);
+     --colorFondoMeme: hsl(278, 100%, 5%);
 
-    --colorTexto: #ffffff; /* Color del texto para modo oscuro */
-    --colorTextoInputs:#333333; /* Color del texto para modo oscuro */
+     --colorTexto: #ffffff;
+     /* Color del texto para modo oscuro */
+     --colorTextoInputs: #333333;
+     /* Color del texto para modo oscuro */
 
-    --colorFondoBotones: #50007f;
-    --colorFondoBotonesRGB: 80, 0, 127; /* Valor RGB del color */
+     --colorFondoBotones: #50007f;
+     --colorFondoBotonesRGB: 80, 0, 127;
+     /* Valor RGB del color */
 
-    --colorTextoBotones: rgb(255, 255, 255); /* Color del texto */
-    
-    --colorTextoBotonesSecundarios:#ffffff; /* Color del texto */
+     --colorTextoBotones: rgb(255, 255, 255);
+     /* Color del texto */
 
-    --colorFondoLabel:#e8e8e8;
+     --colorTextoBotonesSecundarios: #ffffff;
+     /* Color del texto */
 
-}
+     --colorFondoLabel: #e8e8e8;
 
-.modo-claro {
-    --colorFondoHeader:#fafafa;
+ }
 
-    --colorFondoMeme: #e8e8e8;
+ .modo-claro {
+     --colorFondoHeader: #fafafa;
 
-    --colorTexto:#333333; /* Color del texto para modo oscuro */
-    --colorTextoInputs:#333333; /* Color del texto para modo claro */
+     --colorFondoMeme: #e8e8e8;
+
+     --colorTexto: #333333;
+     /* Color del texto para modo oscuro */
+     --colorTextoInputs: #333333;
+     /* Color del texto para modo claro */
 
 
 
-    --colorFondoBotones: #50007f;
-    --colorFondoBotonesRGB: 80, 0, 127; /* Valor RGB del color */
+     --colorFondoBotones: #50007f;
+     --colorFondoBotonesRGB: 80, 0, 127;
+     /* Valor RGB del color */
 
-    --colorTextoBotones:#ffffff; /* Color del texto */
+     --colorTextoBotones: #ffffff;
+     /* Color del texto */
 
-    --colorTextoBotonesSecundarios: #50007f; /* Color del texto */
+     --colorTextoBotonesSecundarios: #50007f;
+     /* Color del texto */
 
-    --colorFondoLabel:#e8e8e8;
+     --colorFondoLabel: #e8e8e8;
 
-}
+ }
 
  /* PANELES DE CONTROL VISIBLE Y OCULTO*/
 
-.panel-control-imagen,
-.panel-control-texto {
-    display: none;
-}
+ .panel-control-imagen,
+ .panel-control-texto {
+     display: none;
+ }
 
-.panel-visible {
-    display: block;
-}
+ .panel-visible {
+     display: block;
+ }
 
  /* BODY*/
 
-body {
-    width: 100%;
-    /* height: 100vh; */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: background-color 0.5s, color 0.5s;
-}
+ body {
+     width: 100%;
+     /* height: 100vh; */
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     overflow: hidden;
+     transition: background-color 0.5s, color 0.5s;
+ }
 
  /* HEADER */
 
-header {
-    width: 100%;
-    height: 125px;
-    margin-top: -10px;
-    background-color: var(--colorFondoHeader);
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
+ header {
+     width: 100%;
+     height: 18vh;
+     margin-top: -20px;
+     background-color: var(--colorFondoHeader);
+     display: block;
+     justify-content: center;
+     align-items: center;
+ }
 
-.titulo-app {
-    padding-top: 20px;
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 27px;
-    color:var(--colorTexto);
-    text-align: center;
-}
+ .titulo-app {
+    margin-top: 20px;
+     padding-top: 20px;
+     font-family: "Orbitron", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: weight;
+     font-style: normal;
+     font-size: 21px;
+     color: var(--colorTexto);
+     text-align: center;
+ }
 
-.contenedor-botones-principales {
+ .contenedor-botones-principales {
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-}
-.contenedor-botones-principales button i {
-    padding: 5px;
-}
+ }
 
-.contenedor-botones-principales button {
-    margin: 5px;
-    padding: 0 20px;
-    height: 40px;
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 14px;
-    color:var(--colorTexto);
-    background-color: transparent;
-    border-color: transparent;
-    cursor: pointer;
-    /* Cambia el cursor a una mano */
-    transition: background-color 0.3s, color 0.3s;
-    /* Transición suave */
-}
+ .contenedor-botones-principales button i {
+     padding: 0;
+     margin: 0;
+ }
 
-.contenedor-botones-principales button:hover {
-    border-radius: 3px;
-    color: var(--colorTextoBotones);
-    background-color: var(--colorFondoBotones);
-}
+ .contenedor-botones-principales button {
+     margin: 0px;
+     padding: 0 20px;
+     height: 40px;
+     font-family: "Orbitron", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: weight;
+     font-style: normal;
+     font-size: 12px;
+     color: var(--colorTexto);
+     background-color: transparent;
+     border-color: transparent;
+     cursor: pointer;
+     /* Cambia el cursor a una mano */
+     transition: background-color 0.3s, color 0.3s;
+     /* Transición suave */
+ }
+
+ .contenedor-botones-principales button:hover {
+     border-radius: 3px;
+     color: var(--colorTextoBotones);
+     background-color: var(--colorFondoBotones);
+ }
 
  /* MAIN*/
 
-.main {
-    /* height: 1500px; */
-    background-color: var(--colorFondoMeme);
+ .main {
+     /* height: 1500px; */
+     background-color: var(--colorFondoMeme);
 
-}
+ }
 
  /* CONTENEDOR DEL MEME CON SU RESPECTIVO BOTON DE DESCARGA */
 
-.contenedor-meme {
-    width: 100%;
-    height:85vh;
-    display: flex; /* Cambia de block a flex */
-    justify-content: center;
-    align-items: center;
-    background-color: var(--colorFondoMeme);
-    flex-direction: column; /* Alinea elementos en columna */
-}
+ .contenedor-meme {
+     width: 100%;
+     height: 85vh;
+     display: flex;
+     /* Cambia de block a flex */
+     justify-content: center;
+     align-items: center;
+     background-color: var(--colorFondoMeme);
+     flex-direction: column;
+     /* Alinea elementos en columna */
+ }
 
-#card {
-    width: 500px ;
-    height:500px;
+ #card {
+     width: 300px;
+     height: 300px;
 
-}
+ }
 
-#contenedor-imagen {
-    width: 450px ;
-    height:300px;
-    background-position: center;
-    background-size: cover;
-}
+ #card,
+ #topcard,
+ #bottomcard {
+     text-align: center;
+     font-size: 18px;
+ }
+
+ #contenedor-imagen {
+     width: 300px;
+     height: 200px;
+     background-position: center;
+     background-size: cover;
+     background-color: black;
+ }
 
 
-  .botones-secundarios {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
+ .botones-secundarios {
+     display: flex;
+     margin-top: 20px;
+     margin-bottom: 20px;
 
-}
+ }
 
-.botones-secundarios button {
-    padding: 10px 20px;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    background-color:var(--colorFondoBotones);
-    color:var(--colorTextoBotones);
-    border: none;
-    border-radius: 16px; /* Mantiene el diseño redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
+ .botones-secundarios button {
+     padding: 10px 20px;
+     font-family: "Raleway", sans-serif;
+     font-size: 14px;
+     background-color: var(--colorFondoBotones);
+     color: var(--colorTextoBotones);
+     border: none;
+     border-radius: 16px;
+     /* Mantiene el diseño redondeado */
+     cursor: pointer;
+     transition: background-color 0.3s, box-shadow 0.3s;
+ }
 
-.botones-secundarios button:hover {
-    background-color: var(--colorFondoBotones); /* Mantiene el color de fondo */
-    box-shadow: 0 4px 8px rgba(var(--colorFondoBotonesRGB), 0.5); /* Sombra dinámica */
-}
+ .botones-secundarios button:hover {
+     background-color: var(--colorFondoBotones);
+     /* Mantiene el color de fondo */
+     box-shadow: 0 4px 8px rgba(var(--colorFondoBotonesRGB), 0.5);
+     /* Sombra dinámica */
+ }
 
 
  /* PANELES DE CONTROL DE TEXTO*/
 
-.panel-control-texto {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    right: -5px;
-    top: 10px;
-    background-color: var(--colorFondoHeader);
-    color:var(--colorTexto);
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+ .panel-control-texto {
+     width: 95%;
+     height: 100vh;
+     position: absolute;
+     right: -5px;
+     top: 10px;
+     background-color: var(--colorFondoHeader);
+     color: var(--colorTexto);
+     padding: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
 
-.panel-control-texto h2 {
+ #cerrar-texto {
+    margin-left: 270px;
+    color: var(--colorTextoBotonesSecundarios);
     font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 12px;
-    color:var(--colorTexto);
-    text-align: left;
-}
-
-#restablecer {
-    display: block;
-    margin-top: 20px;
-    padding: 6px 10px; /* Tamaño ligeramente más pequeño */
-    font-family: "Raleway", sans-serif;
-    font-size: 12px; /* Fuente más pequeña */
-    font-weight: bold;
-    background-color: transparent; /* Fondo transparente */
-    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
-    /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+    font-size: 18px;
+    background-color: transparent;
     border: none;
-    border-radius: 16px; /* Mantiene el diseño redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
+     border-radius: 16px;
+ }
 
-#restablecer  button:hover {
-    background-color: var(--colorFondoBotones);
-    color: var(--colorTextoBotones);
-    box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3); /* Sombra más sutil */
-}
+ .panel-control-texto h2 {
+     font-family: "Orbitron", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-size: 12px;
+     color: var(--colorTexto);
+     text-align: left;
+ }
+
+ #restablecer {
+     display: block;
+     margin-top: 20px;
+     padding: 6px 10px;
+     /* Tamaño ligeramente más pequeño */
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     /* Fuente más pequeña */
+     font-weight: bold;
+     background-color: transparent;
+     /* Fondo transparente */
+     color: var(--colorTextoBotonesSecundarios);
+     /* Color del texto */
+     /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+     border: none;
+     border-radius: 16px;
+     /* Mantiene el diseño redondeado */
+     cursor: pointer;
+     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+ }
+
+ #restablecer button:hover {
+     background-color: var(--colorFondoBotones);
+     color: var(--colorTextoBotones);
+     box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
+     /* Sombra más sutil */
+ }
 
 
 
@@ -228,76 +271,101 @@ header {
 
  /* PANELES DE CONTROL DE IMAGEN*/
 
-.panel-control-imagen {
-    width: 100%;
-    position: absolute;
-    right: -5px;
-    top: 10px;
-    background-color: var(--colorFondoHeader);
-    color:var(--colorTexto);
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+ .panel-control-imagen {
+     width: 95%;
+     position: absolute;
+     right: -5px;
+     top: 10px;
+     background-color: var(--colorFondoHeader);
+     color: var(--colorTexto);
+     padding: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
 
-.panel-control-imagen h2 {
+ #cerrar-imagen {
+    margin-left: 270px;
+    color: var(--colorTextoBotonesSecundarios);
     font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 12px;
-    color:var(--colorTexto);
-    text-align: left;
-}
-
-.panel-control-imagen h3 {
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 12px;
-    color:var(--colorTexto);
-    text-align: left;
-}
-
-.panel-control-imagen #cargar-imagen {
-    margin-top: 5px;
-    padding: 6px 10px; /* Tamaño ligeramente más pequeño */
-    font-family: "Raleway", sans-serif;
-    font-size: 12px; /* Fuente más pequeña */
-    font-weight: bold;
-
-    background-color: transparent; /* Fondo transparente */
-    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
-    border: none; /* Borde para diferenciarlo */
-    border-radius: 16px; /* Mantiene el diseño redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
-
-
-.panel-control-imagen #cargar-imagen  button:hover {
-    background-color: var(--colorFondoBotones);
-    color: var(--colorTextoBotones);
-    box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3); /* Sombra más sutil */
-}
-
-.boton-filtros #reestablecer-filtros {
-    margin-top: 5px;
-    padding: 6px 10px; /* Tamaño ligeramente más pequeño */
-    font-family: "Raleway", sans-serif;
-    font-size: 12px; /* Fuente más pequeña */
-    font-weight: bold;
-    background-color: transparent; /* Fondo transparente */
-    color: var(--colorTextoBotonesSecundarios); /* Color del texto */
-    /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+    font-size: 18px;
+    background-color: transparent;
     border: none;
-    border-radius: 16px; /* Mantiene el diseño redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-}
+     border-radius: 16px;
+ }
 
-.boton-filtros #reestablecer-filtros button:hover {
-    background-color: var(--colorFondoBotones); /* Mantiene el color de fondo */
-    box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5); /* Sombra dinámica */
-}
+
+ .panel-control-imagen h2 {
+     font-family: "Orbitron", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-size: 12px;
+     color: var(--colorTexto);
+     text-align: left;
+ }
+
+ .panel-control-imagen h3 {
+     font-family: "Orbitron", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-size: 12px;
+     color: var(--colorTexto);
+     text-align: left;
+ }
+
+ .panel-control-imagen #cargar-imagen {
+     margin-top: 5px;
+     padding: 6px 10px;
+     /* Tamaño ligeramente más pequeño */
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     /* Fuente más pequeña */
+     font-weight: bold;
+
+     background-color: transparent;
+     /* Fondo transparente */
+     color: var(--colorTextoBotonesSecundarios);
+     /* Color del texto */
+     border: none;
+     /* Borde para diferenciarlo */
+     border-radius: 16px;
+     /* Mantiene el diseño redondeado */
+     cursor: pointer;
+     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+ }
+
+
+ .panel-control-imagen #cargar-imagen button:hover {
+     background-color: var(--colorFondoBotones);
+     color: var(--colorTextoBotones);
+     box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
+     /* Sombra más sutil */
+ }
+
+ .boton-filtros #reestablecer-filtros {
+     margin-top: 5px;
+     padding: 6px 10px;
+     /* Tamaño ligeramente más pequeño */
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     /* Fuente más pequeña */
+     font-weight: bold;
+     background-color: transparent;
+     /* Fondo transparente */
+     color: var(--colorTextoBotonesSecundarios);
+     /* Color del texto */
+     /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+     border: none;
+     border-radius: 16px;
+     /* Mantiene el diseño redondeado */
+     cursor: pointer;
+     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+ }
+
+ .boton-filtros #reestablecer-filtros button:hover {
+     background-color: var(--colorFondoBotones);
+     /* Mantiene el color de fondo */
+     box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5);
+     /* Sombra dinámica */
+ }
 
 
 
@@ -307,195 +375,395 @@ header {
  /* PANEL DE TEXTO / FORM / INPUTS / LABELS*/
 
  form #textos label {
-    height: 20px;
-    display: block;
-    margin-top: 10px;
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    color:var(--colorTexto);
-}
+     height: 20px;
+     display: block;
+     margin-top: 10px;
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     color: var(--colorTexto);
+ }
 
 
-form #textos select {
-    height: 30px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding: 0px;
-    border-radius: 5px;
-    background: var(--colorFondoLabel);
-    border: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    color:var(--colorTextoInputs);
+ form #textos select {
+     height: 30px;
+     margin-top: 2px;
+     margin-bottom: 2px;
+     padding: 0px;
+     border-radius: 5px;
+     background: var(--colorFondoLabel);
+     border: none;
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     color: var(--colorTextoInputs);
 
-}
+ }
 
-form #textos input {
-    width: 70%;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    padding: 10px;
-    border-radius: 8px;
-    background: var(--colorFondoLabel);
-    border: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    color:var(--colorTextoInputs);
-}
+ form #textos input {
+     width: 70%;
+     margin-top: 3px;
+     margin-bottom: 3px;
+     padding: 10px;
+     border-radius: 8px;
+     background: var(--colorFondoLabel);
+     border: none;
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     color: var(--colorTextoInputs);
+ }
 
-form #tipografia {
-    width: 80%; /* Ancho del input */
-    padding: 8px;
-    display: flex;
-    justify-content:space-between;
+ form #tipografia {
+     width: 80%;
+     /* Ancho del input */
+     padding: 8px;
+     display: flex;
+     justify-content: space-between;
 
 
-}
+ }
 
 
 
  /* PANEL DE IMAGEN / FORM / INPUTS / LABELS*/
 
-form #filtros label {
-    height: 20px;
-    display: block;
-    margin-top: 10px;
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    color:var(--colorTexto);
+ form #filtros label {
+     height: 20px;
+     display: block;
+     margin-top: 10px;
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     color: var(--colorTexto);
 
-}
+ }
 
 
-form #filtros input {
-    width: 70%;
-    padding: 4px;
+ form #filtros input {
+     width: 70%;
+     padding: 4px;
 
-    border-radius: 5px;
-    background: var(--colorFondoLabel);
-    border: none;
-    font-family: "Raleway", sans-serif;
-    font-size: 12px;
-    color:var(--colorTextoInputs);
-}
+     border-radius: 5px;
+     background: var(--colorFondoLabel);
+     border: none;
+     font-family: "Raleway", sans-serif;
+     font-size: 12px;
+     color: var(--colorTextoInputs);
+ }
 
-form #filtros .accent {
-    accent-color: #50007f;
-}
+ form #filtros .accent {
+     accent-color: #50007f;
+ }
 
 
 
 
  /* RESPONSIVE */
 
-    /* tablet */
-@media (min-width: 768px) {
+ /* tablet */
+ @media (min-width: 768px) {
 
-    header {
-        width: 100%;
-        height: 125px;
+     header {
+         width: 100%;
+         height: 125px;
+     }
+
+     .contenedor-botones-principales {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+ }
+
+ /* escritorio */
+ @media (min-width: 1024px) {
+
+     .panel-control-imagen,
+     .panel-control-texto {
+         display: none;
+     }
+
+     .panel-visible {
+         display: block;
+     }
+
+
+     escritorio
+     /* HEADER */
+
+     header {
+         width: 100%;
+         margin-top: -10px;
+         background-color: var(--colorFondoHeader);
+         display: block;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .titulo-app {
+         padding-top: 20px;
+         font-family: "Orbitron", sans-serif;
+         font-optical-sizing: auto;
+         font-weight: weight;
+         font-style: normal;
+         font-size: 27px;
+         color: var(--colorTexto);
+         text-align: center;
+     }
+
+     .contenedor-botones-principales {
+         display: flex;
+     }
+
+     .contenedor-botones-principales button i {
+         padding: 5px;
+     }
+
+     .contenedor-botones-principales button {
+         margin: 5px;
+         padding: 0 20px;
+         height: 40px;
+         font-family: "Orbitron", sans-serif;
+         font-optical-sizing: auto;
+         font-weight: weight;
+         font-style: normal;
+         font-size: 14px;
+         color: var(--colorTexto);
+         background-color: transparent;
+         border-color: transparent;
+         cursor: pointer;
+         /* Cambia el cursor a una mano */
+         transition: background-color 0.3s, color 0.3s;
+         /* Transición suave */
+     }
+
+     .contenedor-botones-principales button:hover {
+         border-radius: 3px;
+         color: var(--colorTextoBotones);
+         background-color: var(--colorFondoBotones);
+     }
+
+     .main {
+         display: flex;
+         justify-content: center;
+     }
+
+     .contenedor-meme {
+         width: 100%;
+         height: 85vh;
+         display: flex;
+         /* Cambia de block a flex */
+         justify-content: center;
+         align-items: center;
+         background-color: var(--colorFondoMeme);
+         flex-direction: column;
+         /* Alinea elementos en columna */
+     }
+
+     #card {
+         flex-direction: column;
+         /* Alinea elementos en columna */
+         width: 500px;
+         height: 500px;
+
+     }
+
+     #card #bottomcard {
+         margin-top: 0px;
+     }
+
+
+     #card,
+     #topcard,
+     #bottomcard {
+         margin: 0px;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-family: "Orbitron", sans-serif;
+         font-size: 24px;
+     }
+
+     #contenedor-imagen {
+         width: 500px;
+         height: 500px;
+         background-position: center;
+         background-size: cover;
+         background-color: black;
+     }
+
+
+
+     .botones-secundarios {
+         display: flex;
+         justify-content: center;
+     }
+
+
+
+
+
+
+     .panel-control-texto {
+         width: 15%;
+         background-color: var(--colorFondoHeader);
+         color: var(--colorTexto);
+         padding: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     }
+
+
+     .panel-control-imagen {
+         width: 15%;
+         background-color: var(--colorFondoHeader);
+         color: var(--colorTexto);
+         padding: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     }
+
+
+
+
+
+     .panel-control-texto {
+        width: 15%;
+        height: 100vh;
+        position: absolute;
+        right: -5px;
+        top: 10px;
+        background-color: var(--colorFondoHeader);
+        color: var(--colorTexto);
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
-    .contenedor-botones-principales {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-}
-
-    /* escritorio */
-@media (min-width: 1024px) {
-
-.panel-control-imagen,
-.panel-control-texto {
-    display: none;
-}
-
-.panel-visible {
-    display: block;
-}
-
-
-    escritorio
-
-    header {
-        width: 100%;
-        /* height: 125px; */
-    }
-
-
-    .main {
-        /* height: 120%; */
-        display: flex;
-        justify-content: center;
-    }
-
-    .contenedor-meme {
-        width: 100%;
-        height:85vh;
-        display: flex; /* Cambia de block a flex */
-        justify-content: center;
-        align-items: center;
-        background-color: var(--colorFondoMeme);
-        flex-direction: column; /* Alinea elementos en columna */
-    }
-
-    #card, #topcard, #bottomcard {
-        margin: 8px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+   
+    .panel-control-texto h2 {
         font-family: "Orbitron", sans-serif;
-        font-size: 24px;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 12px;
+        color: var(--colorTexto);
+        text-align: left;
     }
-
-    
-    #card {
-        flex-direction: column; /* Alinea elementos en columna */
-
-        width: 500px ;
-        height:500px;
-    
+   
+    #restablecer {
+        display: block;
+        margin-top: 20px;
+        padding: 6px 10px;
+        /* Tamaño ligeramente más pequeño */
+        font-family: "Raleway", sans-serif;
+        font-size: 12px;
+        /* Fuente más pequeña */
+        font-weight: bold;
+        background-color: transparent;
+        /* Fondo transparente */
+        color: var(--colorTextoBotonesSecundarios);
+        /* Color del texto */
+        /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+        border: none;
+        border-radius: 16px;
+        /* Mantiene el diseño redondeado */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
     }
-    
-    #contenedor-imagen {
-        width: 500px ;
-        height:500px;
-        background-position: center;
-        background-size: cover;
-        background-color: black;
+   
+    #restablecer button:hover {
+        background-color: var(--colorFondoBotones);
+        color: var(--colorTextoBotones);
+        box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
+        /* Sombra más sutil */
     }
-
-
-
-    .botones-secundarios {
-        display: flex;
-        justify-content: center;
-    }
-
-
-
-
-
-
-    .panel-control-texto {
+   
+   
+   
+   
+   
+    /* PANELES DE CONTROL DE IMAGEN*/
+   
+    .panel-control-imagen {
         width: 15%;
+        position: absolute;
+        right: -5px;
+        top: 10px;
         background-color: var(--colorFondoHeader);
-        color:var(--colorTexto);
+        color: var(--colorTexto);
         padding: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-    
-    
-    .panel-control-imagen {    
-        width: 15%;
-        background-color: var(--colorFondoHeader);
-        color:var(--colorTexto);
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
+    .panel-control-imagen h2 {
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 12px;
+        color: var(--colorTexto);
+        text-align: left;
     }
-    
-}
+   
+    .panel-control-imagen h3 {
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 12px;
+        color: var(--colorTexto);
+        text-align: left;
+    }
+   
+    .panel-control-imagen #cargar-imagen {
+        margin-top: 5px;
+        padding: 6px 10px;
+        /* Tamaño ligeramente más pequeño */
+        font-family: "Raleway", sans-serif;
+        font-size: 12px;
+        /* Fuente más pequeña */
+        font-weight: bold;
+   
+        background-color: transparent;
+        /* Fondo transparente */
+        color: var(--colorTextoBotonesSecundarios);
+        /* Color del texto */
+        border: none;
+        /* Borde para diferenciarlo */
+        border-radius: 16px;
+        /* Mantiene el diseño redondeado */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+   
+   
+    .panel-control-imagen #cargar-imagen button:hover {
+        background-color: var(--colorFondoBotones);
+        color: var(--colorTextoBotones);
+        box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
+        /* Sombra más sutil */
+    }
+   
+    .boton-filtros #reestablecer-filtros {
+        margin-top: 5px;
+        padding: 6px 10px;
+        /* Tamaño ligeramente más pequeño */
+        font-family: "Raleway", sans-serif;
+        font-size: 12px;
+        /* Fuente más pequeña */
+        font-weight: bold;
+        background-color: transparent;
+        /* Fondo transparente */
+        color: var(--colorTextoBotonesSecundarios);
+        /* Color del texto */
+        /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
+        border: none;
+        border-radius: 16px;
+        /* Mantiene el diseño redondeado */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+   
+    .boton-filtros #reestablecer-filtros button:hover {
+        background-color: var(--colorFondoBotones);
+        /* Mantiene el color de fondo */
+        box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5);
+        /* Sombra dinámica */
+    }
+   
+
+ }
