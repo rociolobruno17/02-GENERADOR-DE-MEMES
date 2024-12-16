@@ -49,6 +49,14 @@ window.onload = () => {
     const $botonCerrarTexto = $("#cerrar-texto");
     const $botonCerrarImagen = $("#cerrar-imagen");
 
+    const $checkboxTextoSuperior = $("#checkbox-texto-superior");
+    const $checkboxTextoInferior = $("#checkbox-texto-inferior");
+
+
+
+    
+
+
 
 
 
@@ -101,6 +109,7 @@ window.onload = () => {
         $panelImagen.classList.remove('panel-visible');
     });
 
+        // Función para abrir y cerrar panel
     $botonCerrarTexto.addEventListener('click', () => {
      $panelTexto.style.display = "none"
     });
@@ -189,14 +198,29 @@ window.onload = () => {
 
     // Función para editar el panel de texto
 
-
     $inputTop.addEventListener("input", () => {
         $topCard.innerText = $inputTop.value
     })
 
+    $checkboxTextoSuperior.addEventListener("change", () => {
+        if ($checkboxTextoSuperior.checked) {
+            $topCard.style.display = "none"; // Oculta el texto
+        } else {
+            $topCard.style.display = "block"; // Muestra el texto
+        }
+    });
+
     $inputBottom.addEventListener("input", () => {
         $bottomCard.innerText = $inputBottom.value
     })
+
+    $checkboxTextoInferior.addEventListener("change", () => {
+        if ($checkboxTextoInferior.checked) {
+            $bottomCard.style.display = "none"; // Oculta el texto
+        } else {
+            $bottomCard.style.display = "block"; // Muestra el texto
+        }
+    });
 
     $inputColor.addEventListener("input", () => {
         $card.style.color = $inputColor.value
@@ -237,10 +261,12 @@ window.onload = () => {
 
 
     function reestablecerValores() {
-        $inputTop.value = ""
-        $inputBottom.value = ""
-        $topCard.innerText = " Texto superior"
-        $bottomCard.innerText = "Texto inferior "
+        $inputTop.value = "Ingrese texto superior"
+        $checkboxTextoSuperior.checked = ""
+        $inputBottom.value = "Ingrese texto inferior"
+        $checkboxTextoInferior.checked = ""
+        $topCard.innerText = "Texto superior"
+        $bottomCard.innerText = "Texto inferior"
         $card.style.backgroundColor = "white"
         $inputAlign.value = "center"
         $inputTamañoFuente.value = "21"

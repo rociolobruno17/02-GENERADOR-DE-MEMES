@@ -1,7 +1,7 @@
  /* MODO OSCURO Y MODO CLARO*/
 
  .modo-oscuro {
-     --colorFondoHeader: hsl(278, 100%, 10%);
+     --colorFondoHeader: hsl(278, 100%, 13%);
 
      --colorFondoMeme: hsl(278, 100%, 5%);
 
@@ -273,6 +273,7 @@
 
  .panel-control-imagen {
      width: 95%;
+     height: 100vh;
      position: absolute;
      right: -5px;
      top: 10px;
@@ -289,7 +290,7 @@
     font-size: 18px;
     background-color: transparent;
     border: none;
-     border-radius: 16px;
+    border-radius: 16px;
  }
 
 
@@ -374,6 +375,19 @@
 
  /* PANEL DE TEXTO / FORM / INPUTS / LABELS*/
 
+#sin-texto-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+#sin-texto-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ } 
+
+
  form #textos label {
      height: 20px;
      display: block;
@@ -386,8 +400,8 @@
 
  form #textos select {
      height: 30px;
-     margin-top: 2px;
-     margin-bottom: 2px;
+     margin-top: 3px;
+     margin-bottom: 3px;
      padding: 0px;
      border-radius: 5px;
      background: var(--colorFondoLabel);
@@ -418,8 +432,9 @@
      display: flex;
      justify-content: space-between;
 
-
  }
+
+
 
 
 
