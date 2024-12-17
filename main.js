@@ -111,14 +111,17 @@ window.onload = () => {
 
         // Función para abrir y cerrar panel
     $botonCerrarTexto.addEventListener('click', () => {
-     $panelTexto.style.display = "none"
+        $panelTexto.classList.remove('panel-visible');
     });
 
     $botonCerrarImagen.addEventListener('click', () => {
-        $panelImagen.style.display = "none"
+        $panelImagen.classList.remove('panel-visible');
        });
 
-
+        // $panelTexto { agregamos panel visible
+       // display: none;
+       // 
+       // }
 
 
 
@@ -181,12 +184,12 @@ window.onload = () => {
 
     $inputHue.addEventListener("input", () => {
         let aux = $contenedorImagen.style.filter;
-        $contenedorImagen.style.filter = `${aux} hue-rotation(${$inputHue.value}deg)`;
+        $contenedorImagen.style.filter = `${aux} hue-rotat(${$inputHue.value}deg)`;
     });
 
     $inputSaturacion.addEventListener("input", () => {
         let aux = $contenedorImagen.style.filter;
-        $contenedorImagen.style.filter = `${aux} saturation(${$inputSaturacion.value}%)`;
+        $contenedorImagen.style.filter = `${aux} saturate(${$inputSaturacion.value}%)`;
     });
 
     $inputNegativo.addEventListener("input", () => {
@@ -261,9 +264,9 @@ window.onload = () => {
 
 
     function reestablecerValores() {
-        $inputTop.value = "Ingrese texto superior"
+        $inputTop.value = ""
         $checkboxTextoSuperior.checked = ""
-        $inputBottom.value = "Ingrese texto inferior"
+        $inputBottom.value = ""
         $checkboxTextoInferior.checked = ""
         $topCard.innerText = "Texto superior"
         $bottomCard.innerText = "Texto inferior"
