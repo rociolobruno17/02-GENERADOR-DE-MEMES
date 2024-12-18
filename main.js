@@ -8,6 +8,7 @@ window.onload = () => {
         return document.querySelector(element)
     }
 
+    // Estas son todos mis elementos de HTML
     const $body = $("body")
     const $botonModo = $(".boton-modo")
     const $iconoModo = $("#icono-modo")
@@ -54,18 +55,7 @@ window.onload = () => {
 
 
 
-    
-
-
-
-
-
-
-
-
-
     // Función para aplicar modo claro y modo oscuro
-
     $botonModo.addEventListener("click", () => {
         if ($body.classList.contains("modo-oscuro")) {
 
@@ -109,37 +99,19 @@ window.onload = () => {
         $panelImagen.classList.remove('panel-visible');
     });
 
-        // Función para abrir y cerrar panel
+    // Función para abrir y cerrar panel
     $botonCerrarTexto.addEventListener('click', () => {
         $panelTexto.classList.remove('panel-visible');
     });
 
     $botonCerrarImagen.addEventListener('click', () => {
         $panelImagen.classList.remove('panel-visible');
-       });
-
-        // $panelTexto { agregamos panel visible
-       // display: none;
-       // 
-       // }
+    });
 
 
-
-    // Función para que el usuario cargue la URL de una imagen en el panel de imagen
+    // Función paracargar imagen de usuario
 
     $cargarImagen.addEventListener("click", () => {
-        // event.preventDefault(); // Prevenir el envío del formulario
-        // const imageUrl = $urlImagen.value.trim(); // Obtener y limpiar la URL ingresada
-        // if (imageUrl) {
-        //     const imgElement = document.createElement("img"); // Crear un elemento <img>
-        //     imgElement.src = imageUrl; // Asignar la URL como fuente
-        //     imgElement.alt = "mi-meme.png"; // Agregar un texto alternativo
-        //     $contenedorImagen.innerHTML = ""; // Limpiar cualquier contenido anterior
-        //     $contenedorImagen.appendChild(imgElement); // Insertar la nueva imagen
-        // } else {
-        //     alert("Por favor, ingresa una URL válida."); // Avisar si el campo está vacío
-        // }
-
         $contenedorImagen.style.backgroundImage = `url(${$urlImagen.value})`
     });
 
@@ -149,7 +121,6 @@ window.onload = () => {
 
 
     // Función para editar el panel de imagen
-
     $inputBrillo.addEventListener("input", () => {
         let aux = $contenedorImagen.style.filter;
         $contenedorImagen.style.filter = `${aux} brightness(${$inputBrillo.value})`;
@@ -200,7 +171,6 @@ window.onload = () => {
 
 
     // Función para editar el panel de texto
-
     $inputTop.addEventListener("input", () => {
         $topCard.innerText = $inputTop.value
     })
@@ -256,13 +226,7 @@ window.onload = () => {
 
 
 
-
-
-
-
     // Función para restablecer valores en el panel de texto
-
-
     function reestablecerValores() {
         $inputTop.value = ""
         $checkboxTextoSuperior.checked = ""
@@ -275,10 +239,10 @@ window.onload = () => {
         $inputTamañoFuente.value = "21"
         $inputInterlineado.value = "1.5"
         $inputFuente.value = "'Courier New', monospace";
-        $inputColorFondo.value =  "#ffffff"; 
-        $inputColor.value =  "#50007f";
+        $inputColorFondo.value = "#ffffff";
+        $inputColor.value = "#50007f";
 
-        $topCard.style.fontFamily =  "'Courier New', monospace";
+        $topCard.style.fontFamily = "'Courier New', monospace";
         $bottomCard.style.fontFamily = "'Courier New', monospace";
 
     }
@@ -289,9 +253,7 @@ window.onload = () => {
 
 
 
-        // Función para restablecer filtros en el panel de imagen
-
-
+    // Función para restablecer filtros en el panel de imagen
     function reestablecerFiltros() {
         $inputBrillo.value = "1"
         $inputOpacidad.value = "1"
@@ -308,52 +270,16 @@ window.onload = () => {
     $botonFiltros.addEventListener("click", reestablecerFiltros)
 
 
-    // // Función para iniciar valores de filtros en el panel de imagen
-    // function iniciarValores() {
-    //     $inputBrillo.value = "1"
-    //     $inputOpacidad.value = "1"
-    //     $inputContraste.value = "100"
-    //     $inputDesenfoque.value = "0"
-    //     $inputGrises.value = "0"
-    //     $inputSepia.value = "0"
-    //     $inputHue.value = "0"
-    //     $inputSaturacion.value = "100"
-    //     $inputNegativo.value = "0"
-    // }
-    // iniciarValores()
-
-
-
     // Función para descargar imagen
-
     $botonDescargar.addEventListener("click", () => {
         // $card.style.width = "500px"
         domtoimage.toBlob($card).then((blob) => {
             saveAs(blob, "mi-meme.png");
-        }).catch((error) =>{
-            console.log (error)
-        } ) ;
-    
+        }).catch((error) => {
+            console.log(error)
+        });
+
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,6 @@
- /* MODO OSCURO Y MODO CLARO*/
+ /* RESPONSIVE */
 
+ /* MODO OSCURO Y MODO CLARO*/
  .modo-oscuro {
      --colorFondoHeader: hsl(278, 100%, 13%);
 
@@ -89,15 +90,15 @@
  }
 
  .contenedor-botones-principales {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
+     display: block;
+     justify-content: center;
+     align-items: center;
+ }
 
- 
+
 
  .titulo-app {
-    margin-top: 20px;
+     margin-top: 20px;
      padding-top: 20px;
      font-family: "Orbitron", sans-serif;
      font-optical-sizing: auto;
@@ -109,9 +110,9 @@
  }
 
  .contenedor-botones-principales {
-    padding: 0;
-    margin: 0;
-    display: flex;
+     padding: 0;
+     margin: 0;
+     display: flex;
  }
 
  .contenedor-botones-principales button i {
@@ -147,6 +148,8 @@
 
  .main {
      /* height: 1500px; */
+     display: flex;
+     justify-content: center;
      background-color: var(--colorFondoMeme);
 
  }
@@ -154,7 +157,7 @@
  /* CONTENEDOR DEL MEME CON SU RESPECTIVO BOTON DE DESCARGA */
 
  .contenedor-meme {
-     width: 100%;
+     width: 300px;
      height: 85vh;
      display: flex;
      /* Cambia de block a flex */
@@ -165,7 +168,7 @@
      /* Alinea elementos en columna */
  }
 
- 
+
 
  #card {
      width: 500px;
@@ -242,12 +245,12 @@
  }
 
  #cerrar-texto {
-    margin-left: 270px;
-    color: var(--colorTextoBotonesSecundarios);
-    font-family: "Orbitron", sans-serif;
-    font-size: 18px;
-    background-color: transparent;
-    border: none;
+     margin-left: 270px;
+     color: var(--colorTextoBotonesSecundarios);
+     font-family: "Orbitron", sans-serif;
+     font-size: 18px;
+     background-color: transparent;
+     border: none;
      border-radius: 16px;
  }
 
@@ -307,13 +310,13 @@
  }
 
  #cerrar-imagen {
-    margin-left: 270px;
-    color: var(--colorTextoBotonesSecundarios);
-    font-family: "Orbitron", sans-serif;
-    font-size: 18px;
-    background-color: transparent;
-    border: none;
-    border-radius: 16px;
+     margin-left: 270px;
+     color: var(--colorTextoBotonesSecundarios);
+     font-family: "Orbitron", sans-serif;
+     font-size: 18px;
+     background-color: transparent;
+     border: none;
+     border-radius: 16px;
  }
 
 
@@ -399,26 +402,26 @@
  /* PANEL DE TEXTO / FORM / INPUTS / LABELS*/
 
 
-#sin-texto-superior {
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
+ #sin-texto-superior {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
  }
 
  #checkbox-texto-superior {
-    display: flex;
-    margin: -70px;
+     display: flex;
+     margin: -70px;
  }
 
-#sin-texto-inferior {
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
- } 
+ #sin-texto-inferior {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+ }
 
  #checkbox-texto-inferior {
-    display: flex;
-    margin: -70px;
+     display: flex;
+     margin: -70px;
  }
 
 
@@ -462,7 +465,8 @@
 
  form #tipografia {
      width: 80%;
-     gap: 8px; /* Espaciado entre los elementos */
+     gap: 8px;
+     /* Espaciado entre los elementos */
      /* Ancho del input */
      padding-top: 12px;
      display: flex;
@@ -471,24 +475,26 @@
  }
 
  #tipografia input [type="color"] {
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 20%; /* Hace el input redondo */
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+     border: none;
+     width: 40px;
+     height: 40px;
+     border-radius: 20%;
+     /* Hace el input redondo */
+     cursor: pointer;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
 
-#tipografia input[type="color"]:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+ #tipografia input[type="color"]:hover {
+     transform: scale(1.1);
+     /* Efecto de zoom al pasar el mouse */
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ }
 
-#tipografia input[type="color"]:active {
-    transform: scale(1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+ #tipografia input[type="color"]:active {
+     transform: scale(1);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
 
 
 
@@ -518,10 +524,10 @@
      color: var(--colorTextoInputs);
  }
 
- 
+
  form #filtros #url-imagen {
-    padding: 10px;
-}
+     padding: 10px;
+ }
 
  form #filtros .accent {
      accent-color: #50007f;
@@ -529,305 +535,8 @@
 
 
 
-
- /* RESPONSIVE */
-
  /* tablet */
  @media (min-width: 768px) {
-
-    .panel-control-imagen,
-    .panel-control-texto {
-        display: none;
-    }
-
-    .panel-visible {
-        display: block;
-    }
-
-
-    escritorio
-    /* HEADER */
-
-    header {
-        width: 100%;
-        margin-top: -10px;
-        background-color: var(--colorFondoHeader);
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .titulo-app {
-        padding-top: 20px;
-        font-family: "Orbitron", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: weight;
-        font-style: normal;
-        font-size: 27px;
-        color: var(--colorTexto);
-        text-align: center;
-    }
-
-    .contenedor-botones-principales {
-        display: flex;
-    }
-
-    .contenedor-botones-principales button i {
-        padding: 5px;
-    }
-
-    .contenedor-botones-principales button {
-        margin: 5px;
-        padding: 0 20px;
-        height: 40px;
-        font-family: "Orbitron", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: weight;
-        font-style: normal;
-        font-size: 14px;
-        color: var(--colorTexto);
-        background-color: transparent;
-        border-color: transparent;
-        cursor: pointer;
-        /* Cambia el cursor a una mano */
-        transition: background-color 0.3s, color 0.3s;
-        /* Transición suave */
-    }
-
-    .contenedor-botones-principales button:hover {
-        border-radius: 3px;
-        color: var(--colorTextoBotones);
-        background-color: var(--colorFondoBotones);
-    }
-
-    .main {
-        display: flex;
-        justify-content: center;
-    }
-
-    .contenedor-meme {
-        width: 100%;
-        height: 85vh;
-        display: flex;
-        /* Cambia de block a flex */
-        justify-content: center;
-        align-items: center;
-        background-color: var(--colorFondoMeme);
-        flex-direction: column;
-        /* Alinea elementos en columna */
-    }
-
-    #card {
-        flex-direction: column;
-        /* Alinea elementos en columna */
-        width: 500px;
-        height: 500px;
-
-    }
-
-    #card #bottomcard {
-        margin-top: 0px;
-    }
-
-
-    #card,
-    #topcard,
-    #bottomcard {
-        margin: 0px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Orbitron", sans-serif;
-        font-size: 24px;
-    }
-
-    #contenedor-imagen {
-        width: 500px;
-        height: 500px;
-        background-position: center;
-        background-size: cover;
-        background-color: black;
-    }
-
-
-
-    .botones-secundarios {
-        display: flex;
-        justify-content: center;
-    }
-
-
-
-
-
-
-    .panel-control-texto {
-        width: 15%;
-        background-color: var(--colorFondoHeader);
-        color: var(--colorTexto);
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-
-    .panel-control-imagen {
-        width: 15%;
-        background-color: var(--colorFondoHeader);
-        color: var(--colorTexto);
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-
-
-
-
-    .panel-control-texto {
-       width: 15%;
-       height: 100vh;
-       position: absolute;
-       right: -5px;
-       top: 10px;
-       background-color: var(--colorFondoHeader);
-       color: var(--colorTexto);
-       padding: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-   }
-  
-   .panel-control-texto h2 {
-       font-family: "Orbitron", sans-serif;
-       font-optical-sizing: auto;
-       font-style: normal;
-       font-size: 12px;
-       color: var(--colorTexto);
-       text-align: left;
-   }
-  
-   #restablecer {
-       display: block;
-       margin-top: 20px;
-       padding: 6px 10px;
-       /* Tamaño ligeramente más pequeño */
-       font-family: "Raleway", sans-serif;
-       font-size: 12px;
-       /* Fuente más pequeña */
-       font-weight: bold;
-       background-color: transparent;
-       /* Fondo transparente */
-       color: var(--colorTextoBotonesSecundarios);
-       /* Color del texto */
-       /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
-       border: none;
-       border-radius: 16px;
-       /* Mantiene el diseño redondeado */
-       cursor: pointer;
-       transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-   }
-  
-   #restablecer button:hover {
-       background-color: var(--colorFondoBotones);
-       color: var(--colorTextoBotones);
-       box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
-       /* Sombra más sutil */
-   }
-  
-  
-  
-  
-  
-   /* PANELES DE CONTROL DE IMAGEN*/
-  
-   .panel-control-imagen {
-       width: 15%;
-       position: absolute;
-       right: -5px;
-       top: 10px;
-       background-color: var(--colorFondoHeader);
-       color: var(--colorTexto);
-       padding: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-   }
-  
-   .panel-control-imagen h2 {
-       font-family: "Orbitron", sans-serif;
-       font-optical-sizing: auto;
-       font-style: normal;
-       font-size: 12px;
-       color: var(--colorTexto);
-       text-align: left;
-   }
-  
-   .panel-control-imagen h3 {
-       font-family: "Orbitron", sans-serif;
-       font-optical-sizing: auto;
-       font-style: normal;
-       font-size: 12px;
-       color: var(--colorTexto);
-       text-align: left;
-   }
-  
-   .panel-control-imagen #cargar-imagen {
-       margin-top: 5px;
-       padding: 6px 10px;
-       /* Tamaño ligeramente más pequeño */
-       font-family: "Raleway", sans-serif;
-       font-size: 12px;
-       /* Fuente más pequeña */
-       font-weight: bold;
-  
-       background-color: transparent;
-       /* Fondo transparente */
-       color: var(--colorTextoBotonesSecundarios);
-       /* Color del texto */
-       border: none;
-       /* Borde para diferenciarlo */
-       border-radius: 16px;
-       /* Mantiene el diseño redondeado */
-       cursor: pointer;
-       transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-   }
-  
-  
-   .panel-control-imagen #cargar-imagen button:hover {
-       background-color: var(--colorFondoBotones);
-       color: var(--colorTextoBotones);
-       box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
-       /* Sombra más sutil */
-   }
-  
-   .boton-filtros #reestablecer-filtros {
-       margin-top: 5px;
-       padding: 6px 10px;
-       /* Tamaño ligeramente más pequeño */
-       font-family: "Raleway", sans-serif;
-       font-size: 12px;
-       /* Fuente más pequeña */
-       font-weight: bold;
-       background-color: transparent;
-       /* Fondo transparente */
-       color: var(--colorTextoBotonesSecundarios);
-       /* Color del texto */
-       /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
-       border: none;
-       border-radius: 16px;
-       /* Mantiene el diseño redondeado */
-       cursor: pointer;
-       transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-   }
-  
-   .boton-filtros #reestablecer-filtros button:hover {
-       background-color: var(--colorFondoBotones);
-       /* Mantiene el color de fondo */
-       box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5);
-       /* Sombra dinámica */
-   }
-  
-
-}
-
- /* escritorio */
- @media (min-width: 1024px) {
 
      .panel-control-imagen,
      .panel-control-texto {
@@ -838,65 +547,16 @@
          display: block;
      }
 
-
-     escritorio
-     /* HEADER */
-
-     header {
-         width: 100%;
-         margin-top: -10px;
-         background-color: var(--colorFondoHeader);
-         display: block;
-         justify-content: center;
-         align-items: center;
-     }
-
      .titulo-app {
          padding-top: 20px;
-         font-family: "Orbitron", sans-serif;
-         font-optical-sizing: auto;
-         font-weight: weight;
-         font-style: normal;
          font-size: 27px;
-         color: var(--colorTexto);
-         text-align: center;
-     }
-
-     .contenedor-botones-principales {
-         display: flex;
-     }
-
-     .contenedor-botones-principales button i {
-         padding: 5px;
      }
 
      .contenedor-botones-principales button {
          margin: 5px;
          padding: 0 20px;
          height: 40px;
-         font-family: "Orbitron", sans-serif;
-         font-optical-sizing: auto;
-         font-weight: weight;
-         font-style: normal;
          font-size: 14px;
-         color: var(--colorTexto);
-         background-color: transparent;
-         border-color: transparent;
-         cursor: pointer;
-         /* Cambia el cursor a una mano */
-         transition: background-color 0.3s, color 0.3s;
-         /* Transición suave */
-     }
-
-     .contenedor-botones-principales button:hover {
-         border-radius: 3px;
-         color: var(--colorTextoBotones);
-         background-color: var(--colorFondoBotones);
-     }
-
-     .main {
-         display: flex;
-         justify-content: center;
      }
 
      .contenedor-meme {
@@ -916,13 +576,7 @@
          /* Alinea elementos en columna */
          width: 500px;
          height: 500px;
-
      }
-
-     #card #bottomcard {
-         margin-top: 0px;
-     }
-
 
      #card,
      #topcard,
@@ -944,17 +598,97 @@
          background-color: black;
      }
 
+     .panel-control-texto {
+         width: 40%;
+         height: 100vh;
+         position: absolute;
+         right: -5px;
+         top: 10px;
+         background-color: var(--colorFondoHeader);
+         color: var(--colorTexto);
+         padding: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     }
 
-
-     .botones-secundarios {
-         display: flex;
-         justify-content: center;
+     .panel-control-imagen {
+         width: 40%;
+         height: 100vh;
+         position: absolute;
+         right: -5px;
+         top: 10px;
+         background-color: var(--colorFondoHeader);
+         color: var(--colorTexto);
+         padding: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
      }
 
 
 
+ }
+
+ /* escritorio */
+ @media (min-width: 1024px) {
+
+     .panel-control-imagen,
+     .panel-control-texto {
+         display: none;
+     }
+
+     .panel-visible {
+         display: block;
+     }
+
+     .titulo-app {
+         padding-top: 20px;
+         font-size: 27px;
+     }
 
 
+     .contenedor-botones-principales button {
+         margin: 5px;
+         padding: 0 20px;
+         height: 40px;
+         font-size: 14px;
+     }
+
+     .contenedor-meme {
+         width: 100%;
+         height: 85vh;
+         display: flex;
+         /* Cambia de block a flex */
+         justify-content: center;
+         align-items: center;
+         background-color: var(--colorFondoMeme);
+         flex-direction: column;
+         /* Alinea elementos en columna */
+     }
+
+     #card {
+         flex-direction: column;
+         /* Alinea elementos en columna */
+         width: 500px;
+         height: 500px;
+     }
+
+     #card,
+     #topcard,
+     #bottomcard {
+         margin: 0px;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-family: "Orbitron", sans-serif;
+         font-size: 24px;
+     }
+
+     #contenedor-imagen {
+         width: 500px;
+         height: 500px;
+         background-position: center;
+         background-size: cover;
+         background-color: black;
+     }
 
      .panel-control-texto {
          width: 15%;
@@ -973,149 +707,5 @@
          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
      }
 
-
-
-
-
-     .panel-control-texto {
-        width: 15%;
-        height: 100vh;
-        position: absolute;
-        right: -5px;
-        top: 10px;
-        background-color: var(--colorFondoHeader);
-        color: var(--colorTexto);
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-   
-    .panel-control-texto h2 {
-        font-family: "Orbitron", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 12px;
-        color: var(--colorTexto);
-        text-align: left;
-    }
-   
-    #restablecer {
-        display: block;
-        margin-top: 20px;
-        padding: 6px 10px;
-        /* Tamaño ligeramente más pequeño */
-        font-family: "Raleway", sans-serif;
-        font-size: 12px;
-        /* Fuente más pequeña */
-        font-weight: bold;
-        background-color: transparent;
-        /* Fondo transparente */
-        color: var(--colorTextoBotonesSecundarios);
-        /* Color del texto */
-        /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
-        border: none;
-        border-radius: 16px;
-        /* Mantiene el diseño redondeado */
-        cursor: pointer;
-        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    }
-   
-    #restablecer button:hover {
-        background-color: var(--colorFondoBotones);
-        color: var(--colorTextoBotones);
-        box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
-        /* Sombra más sutil */
-    }
-   
-   
-   
-   
-   
-    /* PANELES DE CONTROL DE IMAGEN*/
-   
-    .panel-control-imagen {
-        width: 15%;
-        position: absolute;
-        right: -5px;
-        top: 10px;
-        background-color: var(--colorFondoHeader);
-        color: var(--colorTexto);
-        padding: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-   
-    .panel-control-imagen h2 {
-        font-family: "Orbitron", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 12px;
-        color: var(--colorTexto);
-        text-align: left;
-    }
-   
-    .panel-control-imagen h3 {
-        font-family: "Orbitron", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 12px;
-        color: var(--colorTexto);
-        text-align: left;
-    }
-   
-    .panel-control-imagen #cargar-imagen {
-        margin-top: 5px;
-        padding: 6px 10px;
-        /* Tamaño ligeramente más pequeño */
-        font-family: "Raleway", sans-serif;
-        font-size: 12px;
-        /* Fuente más pequeña */
-        font-weight: bold;
-   
-        background-color: transparent;
-        /* Fondo transparente */
-        color: var(--colorTextoBotonesSecundarios);
-        /* Color del texto */
-        border: none;
-        /* Borde para diferenciarlo */
-        border-radius: 16px;
-        /* Mantiene el diseño redondeado */
-        cursor: pointer;
-        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    }
-   
-   
-    .panel-control-imagen #cargar-imagen button:hover {
-        background-color: var(--colorFondoBotones);
-        color: var(--colorTextoBotones);
-        box-shadow: 0 2px 4px rgba(var(--colorFondoBotonesRGB), 0.3);
-        /* Sombra más sutil */
-    }
-   
-    .boton-filtros #reestablecer-filtros {
-        margin-top: 5px;
-        padding: 6px 10px;
-        /* Tamaño ligeramente más pequeño */
-        font-family: "Raleway", sans-serif;
-        font-size: 12px;
-        /* Fuente más pequeña */
-        font-weight: bold;
-        background-color: transparent;
-        /* Fondo transparente */
-        color: var(--colorTextoBotonesSecundarios);
-        /* Color del texto */
-        /* border: 2px solid var(--colorFondoBotones); Borde para diferenciarlo */
-        border: none;
-        border-radius: 16px;
-        /* Mantiene el diseño redondeado */
-        cursor: pointer;
-        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    }
-   
-    .boton-filtros #reestablecer-filtros button:hover {
-        background-color: var(--colorFondoBotones);
-        /* Mantiene el color de fondo */
-        box-shadow: 0 12px 12px rgba(var(--colorFondoBotones), 0.5);
-        /* Sombra dinámica */
-    }
-   
 
  }
